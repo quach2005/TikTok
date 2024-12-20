@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 356px;
+    padding: 20px 8px 0px 16px;
+    margin-left: -20px;
+    overflow-y: hidden;
+    height: calc(100vh - 60px);
+    transition: all 0.2s ease-in-out;
+    &::-webkit-scrollbar {
+        opacity: 0;
+    }
+
+    &:hover {
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            opacity: 1;
+        }
+    }
+}
+

@@ -1,0 +1,40 @@
+.wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.menu-item {
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 4px;
+    align-items: center;
+    padding: 8px 0px;
+    will-change: background-color;
+    transition: none;
+    
+    &:hover { 
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    &.active {
+        color: var(--primary);
+    }
+
+    & span {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+.title {
+    margin-left: 10px;
+    font-family: var(--font-family-bold);
+}
+
+
+.active {
+    color: #fe2c55;
+}

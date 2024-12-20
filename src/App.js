@@ -1,9 +1,10 @@
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
-import { DefaultLayout } from '~/components/Layout';
-
+import DefaultLayout from './Layout';
+import { AuthContext } from '~/AuthContext/AuthContext';
 function App() {
+    const { user } = useContext(AuthContext);
     return (
         <Router>
             <div className="App">
@@ -23,9 +24,7 @@ function App() {
                                 key={index}
                                 path={route.path}
                                 element={
-                                    <Layout>
-                                        <Page />
-                                    </Layout>
+                                    Layout === Fragment ? <Page /> : <Layout currentUser={user}><Page /></Layout>
                                 }
                             />
                         );

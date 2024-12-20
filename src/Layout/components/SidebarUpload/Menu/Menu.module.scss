@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+
+    .title {
+        text-transform: uppercase;
+        font-family: var(--font-family-bold);
+        font-size: 10px;
+        color: rgba(0, 0, 0, 0.34);
+    }
+}
+
+.menu-item {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.65);
+    padding: 9px 10px !important;
+    width: 208px;
+    height: 36px;
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%),
+            linear-gradient(92deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.04) 100%);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 8px !important;
+    }
+}
+
+.menu-wrapper {
+    display: flex;
+    flex-flow: column;
+    gap: 4px;
+}

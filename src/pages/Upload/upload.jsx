@@ -6,11 +6,12 @@ import SidebarUpload from "~/Layout/components/SidebarUpload";
 
 const cx = classNames.bind(style);
 
-function Upload() {
+function Upload({children}) {
     
     return (
         <div className={cx("wrapper")}>
             <SidebarUpload/>
+            {children}
         </div>
     )
 }

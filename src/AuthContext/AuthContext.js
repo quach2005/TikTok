@@ -12,7 +12,6 @@ function AuthContextProvider({children}) {
         setUser(false);
     }
 
-
     return (
         <AuthContext.Provider value={{user, handleLogin, handleLogout}}>
             {children}

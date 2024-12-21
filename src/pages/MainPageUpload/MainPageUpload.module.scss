@@ -1,0 +1,142 @@
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    .header {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        height: 68px;
+        align-items: center;
+        display: flex;
+        flex-flow: row;
+        -webkit-box-pack: center;
+        justify-content: end;
+        padding: 0 32px;
+
+        .avt{
+            border-radius: 50%;
+            height: 36px;
+            width: 36px;
+            cursor: pointer;
+        }
+    }
+    .content {
+        padding: 32px;
+        justify-content: center;
+        align-items: center;
+        overflow-y: scroll;
+        height: 710px;
+        scrollbar-width: none;
+
+
+        // Upload
+        .card-1{
+            height: 605px;
+            width: 100%;
+            background-color: white;
+            padding: 24px;
+            border-radius: var(--border-rd);
+            border: 1px solid rgba(0, 0, 0, 0.078431);
+            .select-video-container{
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 460px;
+                background-color: #faf9f9;
+                border-radius: var(--border-rd);
+                border: 1px dashed rgba(0, 0, 0, 0.078431);
+                cursor: pointer;
+                &:hover{
+                    background: rgba(0, 117, 220, 0.06);
+                    border: 1px dashed #0075dc;
+                }
+
+                .img-upload-video{
+                    height: 72px;
+                    width: 72px;
+                }
+
+                .upload-stage-title{
+                    font-size: 22px;
+                    font-family: var(--font-family-bold);
+                }
+
+                .upload-stage-sub-title{
+                    font-family: var(--font-family);
+                    font-size: 16px;
+                    color: rgba(0, 0, 0, .48);
+                }
+
+                .upload-stage-btn{
+                    width: 184px;
+                    height: 36px;
+                    box-sizing: content-box;
+                    margin-top: 20px;
+                    padding: 0 12px;
+                    border-radius: var(--border-rd);
+                }
+
+            }
+
+            .video-suggestion{
+                height: 95px;
+                width: 100%;
+                padding-top: 32px;
+                display: flex;
+                gap: 16px;
+
+
+                .video-sgt-items{
+                    display: flex;
+
+                    .icon{
+                        padding-right: 8px;
+                    }
+
+                    .title{
+                        font-family: var(--font-family-bold);
+                        font-size: 16px;
+                    }
+                    .description{
+                        color: rgba(0, 0, 0, .48);
+                        margin-top: 5px;
+                        font-size: 13px;
+                        font-family: var(--font-family);
+                    }
+                }
+            }
+        }
+
+
+        // Link CapCut
+        .card-2{
+            background-color: white;
+            height: 72px;
+            width: 100%;
+            padding: 16px;
+            margin-top: 16px;
+            border-radius: var(--border-rd);
+            border: 1px solid rgba(0, 0, 0, 0.078431);
+            display: flex;
+            justify-content: space-between;
+
+            .card-title{
+                font-size: 14px;
+                font-family: var(--font-family-bold);
+            }
+
+            .card-description{
+                font-size: 12px;
+                color: rgba(0, 0, 0, .48);
+            }
+
+            .card-btn{
+                background-color: rgba(0, 0, 0, .05);
+                border-radius: var(--border-rd);
+                font-size: 14px;
+            }
+        }
+    }
+}
+

@@ -158,7 +158,7 @@ const MENU_ITEMS = [
         icon: <FontAwesomeIcon icon={faKeyboard} />,
         title: 'Keyboard shortcuts',
     }
-]
+];
 
 const useMenu = [
     {
@@ -231,7 +231,7 @@ function Header({ currentUser }) {
                 <div className={cx('actions')}>
                     {!currentUser ? (
                         <>
-                            <Link to={config.routes.upload}><Button text >Upload</Button></Link>
+                            <Button text to={config.routes.upload} >Upload</Button>
                             <Button primary onClick={login} >Log In</Button>
                         </>
                     ) : (

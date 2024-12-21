@@ -19,7 +19,7 @@ function SidebarUpload() {
             </div>
 
             <div className={cx('Sidebar')}>
-                <Button primary className={cx('btn-upload')}>
+                <Button to={config.routes.uploadPage} primary className={cx('btn-upload')} >
                     <div className={cx('content')}>
                         {' '}
                         <IconUploadPage /> Up Load

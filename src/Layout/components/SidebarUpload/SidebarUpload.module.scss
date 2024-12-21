@@ -30,8 +30,10 @@
             border-radius: 8px;
 
             .content {
-                display: inline-flex;
-                gap: 3px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 4px;
             }
         }
     }
@@ -47,7 +49,7 @@
         height: 36px;
         color: rgba(0, 0, 0, 0.65);
 
-        &:hover{
+        &:hover {
             color: black;
         }
     }

@@ -4,18 +4,6 @@
     justify-content: space-between;
     width: 247px;
     border-right: 1px solid rgba(0, 0, 0, 0.08);
-    height: 775px;
-    .header {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        height: 68px;
-        padding: 0px 19px 0px 20px;
-        flex-shrink: 0;
-        display: flex;
-        flex-flow: row;
-        -webkit-box-align: center;
-        align-items: center;
-    }
-
     .Sidebar {
         padding: 32px 19px 48px 20px;
         -webkit-box-flex: 1;
@@ -53,11 +41,6 @@
             color: black;
         }
     }
-}
-
-.logo {
-    width: 162px;
-    height: 28px;
 }
 
 .sidebar-spacer {

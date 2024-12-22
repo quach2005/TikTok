@@ -1,0 +1,10 @@
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    background-color: #faf9f9;
+    .body {
+        display: flex;
+        flex-flow: row;
+        height: 710px;
+    }
+}

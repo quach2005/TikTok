@@ -29,7 +29,7 @@ function Button({
     };
     // Remove all event listeners if the button is disabled
     if (disabled) {
-        Object.keys(props).forEach(key => {
+        Object.keys(props).forEach((key) => {
             if (key.startsWith('on') && typeof props[key] === 'function') {
                 delete props[key];
             }
@@ -41,6 +41,7 @@ function Button({
         Comp = Link;
     } else if (href) {
         props.href = href;
+        props.target = '_blank';
         Comp = 'a';
     }
 
@@ -58,7 +59,7 @@ function Button({
 
     // Render the button
     return (
-        <Comp className={classes} {...props} {...passProps} >
+        <Comp className={classes} {...props} {...passProps}>
             {iconLeft && <span className={cx('icon')}>{iconLeft}</span>}
             <span className={cx('title')}>{children}</span>
             {iconRight && <span className={cx('icon')}>{iconRight}</span>}
@@ -80,5 +81,5 @@ Button.propTypes = {
     iconRight: PropTypes.node,
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func,
-}
+};
 export default Button;

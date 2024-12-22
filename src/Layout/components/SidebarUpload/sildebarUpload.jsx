@@ -1,8 +1,5 @@
 import classNames from 'classnames/bind';
-
-import Image from '~/components/img/Image';
 import style from './SidebarUpload.module.scss';
-import logoUpload from '~/assets/images/logo_upload.png';
 import Button from '~/components/Button';
 import { IconBack, IconUploadPage } from '~/components/Icons';
 import Menu from './Menu';
@@ -13,13 +10,10 @@ const cx = classNames.bind(style);
 function SidebarUpload() {
     return (
         <div className={cx('wrapper')}>
-            {/* Header */}
-            <div className={cx('header')}>
-                <Image src={logoUpload} alt="Logo Upload" className={cx('logo')} />
-            </div>
 
+            {/* Sidebar */}
             <div className={cx('Sidebar')}>
-                <Button to={config.routes.uploadPage} primary className={cx('btn-upload')} >
+                <Button to={config.routes.upload} primary className={cx('btn-upload')}>
                     <div className={cx('content')}>
                         {' '}
                         <IconUploadPage /> Up Load
@@ -28,10 +22,11 @@ function SidebarUpload() {
 
                 <div className={cx('sidebar-spacer')}></div>
 
-                {/* Quản Lý */}
+                {/* Sidebar */}
                 <Menu />
             </div>
 
+            {/* Btn Back To Home */}
             <NavLink to={config.routes.home} className={cx('footer')}>
                 <IconBack width="1.4rem" height="1.4rem" />
                 Back to TikTok

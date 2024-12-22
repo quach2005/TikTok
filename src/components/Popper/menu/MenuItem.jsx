@@ -11,7 +11,7 @@ function MenuItem({ data, onClick, title, className}) {
         [className]: className
     });
     return (
-        <Button iconLeft={data.icon} to={data.to} className={classes} onClick={onClick} >
+        <Button iconLeft={data.icon} href={data.href} to={data.to} className={classes} onClick={onClick} >
             {data.title_language ? title : data.title}
         </Button>
     );

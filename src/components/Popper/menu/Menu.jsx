@@ -9,7 +9,7 @@ import HeaderMenu from './HeaderMenu';
 
 const cx = classNames.bind(styles);
 
-function Menu({ children, items = [],hideOnClick = false, onChange, handleLogout }) {
+function Menu({ children, items = [],hideOnClick = false, onChange, handleLogout, delay = [0,700] }) {
     // menu
     const [menu, setMenu] = useState(items);
 
@@ -71,7 +71,7 @@ function Menu({ children, items = [],hideOnClick = false, onChange, handleLogout
                 offset={[12, 8] }
                 interactive
                 placement="bottom-end"
-                delay={[0, 700]}
+                delay={delay}
                 render={(attrs) => (
                     <div tabIndex="-1" {...attrs} className={cx('menu-list')}>
                         <PopperWrapper className={cx('menu-popper')}>

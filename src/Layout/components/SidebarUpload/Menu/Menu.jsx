@@ -12,6 +12,7 @@ import {
     IconMusic,
     IconPost,
 } from '~/components/Icons';
+import config from '~/Config';
 
 const cx = classNames.bind(style);
 const menu = [
@@ -21,18 +22,22 @@ const menu = [
             {
                 icon: <IconHome width="2rem" height="2rem" />,
                 title: 'Home',
+                to: config.routes.tiktokstudio
             },
             {
                 icon: <IconPost width="1.8rem" height="1.8rem" />,
                 title: 'Post',
+                to: config.routes.post
             },
             {
                 icon: <IconData width="1.8rem" height="1.8rem" />,
                 title: 'Analysis',
+                to: config.routes.analytics
             },
             {
                 icon: <IconComment width="1.8rem" height="1.8rem" />,
                 title: 'Comment',
+                to: config.routes.comment
             }
         ],
     },
@@ -42,14 +47,17 @@ const menu = [
             {
                 icon: <IconLightbulb width="1.8rem" height="1.8rem" />,
                 title: 'Inspiration',
+                to : config.routes.inspiration
             },
             {
                 icon: <IconBook width="1.8rem" height="1.8rem" />,
                 title: 'Creator Academy',
+                href : config.routes.academy
             },
             {
                 icon: <IconMusic width="1.8rem" height="1.8rem" />,
                 title: 'Unlimited Sound',
+                to : config.routes.soundLibrary
             },
         ],
     },
@@ -59,6 +67,7 @@ const menu = [
             {
                 icon: <IconMail width="1.8rem" height="1.8rem" />,
                 title: 'Feedback',
+                to : config.routes.contactUs
             },
         ],
     },

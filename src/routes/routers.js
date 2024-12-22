@@ -3,11 +3,20 @@ import config from '~/Config';
 import Home from '~/pages/Home';
 import Following from '~/pages/Following';
 import Profile from '~/pages/Profile';
-import Upload from '~/pages/Upload';
+import LayoutTikTokStudio from '~/pages/TikTokStudio/LayoutTikTokStudio';
 import Search from '~/pages/Search';
 import Live from '~/pages/Live';
 import Error from '~/pages/Error/Error';
-import MainPageUpload from '~/pages/MainPageUpload/MainPageUpload';
+// Pages TikTok Studio
+import Upload from '~/pages/TikTokStudio/Upload';
+import HomeTikTokStudio from '~/pages/TikTokStudio/Home';
+import Post from '~/pages/TikTokStudio/Post';
+import Analytics from '~/pages/TikTokStudio/Analytics';
+import Comment from '~/pages/TikTokStudio/Comment';
+import Inspiration from '~/pages/TikTokStudio/Inspiration';
+import SoundLib from '~/pages/TikTokStudio/SoundLib';
+import Feedback from '~/pages/TikTokStudio/Feedback/Feedback';
+
 // Public routes
 const publicRoutes = [
     { path: config.routes.home, component: Home },
@@ -16,7 +25,15 @@ const publicRoutes = [
     { path: config.routes.search, component: Search },
     { path: config.routes.live, component: Live },
     { path: config.routes.error, component: Error, layout: null },
-    { path: config.routes.upload, component: MainPageUpload, layout: Upload}
+    { path: config.routes.tiktokstudio, component : HomeTikTokStudio, layout:LayoutTikTokStudio},
+    { path: config.routes.upload, component: Upload, layout: LayoutTikTokStudio},
+    { path: config.routes.post, component: Post, layout: LayoutTikTokStudio},
+    { path: config.routes.analytics, component: Analytics, layout: LayoutTikTokStudio},
+    { path: config.routes.comment, component: Comment, layout: LayoutTikTokStudio},
+    { path: config.routes.inspiration, component: Inspiration, layout: LayoutTikTokStudio},
+    { path: config.routes.soundLibrary, component: SoundLib, layout: LayoutTikTokStudio},
+    { path: config.routes.contactUs, component: Feedback, layout: LayoutTikTokStudio},
+
 ];
 
 const privateRoutes = [];

@@ -1,28 +1,8 @@
 .wrapper {
-    flex: 1;
     display: flex;
     flex-flow: column;
-    .header {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        height: 68px;
-        align-items: center;
-        display: flex;
-        flex-flow: row;
-        -webkit-box-pack: center;
-        justify-content: end;
-        padding: 0 32px;
-
-        .avt{
-            border-radius: 50%;
-            height: 36px;
-            width: 36px;
-            cursor: pointer;
-        }
-    }
     .content {
         padding: 32px;
-        justify-content: center;
-        align-items: center;
         overflow-y: scroll;
         height: 710px;
         scrollbar-width: none;
@@ -90,15 +70,15 @@
                 .video-sgt-items{
                     display: flex;
 
-                    .icon{
+                    .card-1-icon{
                         padding-right: 8px;
                     }
 
-                    .title{
+                    .card-1-title{
                         font-family: var(--font-family-bold);
                         font-size: 16px;
                     }
-                    .description{
+                    .card-1-description{
                         color: rgba(0, 0, 0, .48);
                         margin-top: 5px;
                         font-size: 13px;
@@ -121,20 +101,25 @@
             display: flex;
             justify-content: space-between;
 
-            .card-title{
+            .card-2-title{
                 font-size: 14px;
-                font-family: var(--font-family-bold);
+                font-family: var(--font-family);
+                font-weight: bolder;
             }
 
-            .card-description{
+            .card-2-description{
                 font-size: 12px;
                 color: rgba(0, 0, 0, .48);
             }
 
-            .card-btn{
+            .card-2-btn{
                 background-color: rgba(0, 0, 0, .05);
                 border-radius: var(--border-rd);
                 font-size: 14px;
+
+                &:hover{
+                    background-color: rgba(0, 0, 0, .1);
+                }
             }
         }
     }

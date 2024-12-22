@@ -11,6 +11,7 @@ const cx = classNames.bind(styles);
 function DefaultLayout({ children, currentUser }) {
     return (
         <div className={cx('wrapper')}>
+            <title>TikTok - Make your day</title>
             <Header currentUser={currentUser} />
             <div className={cx('container')}>
                 <Sidebar currentUser={currentUser} />

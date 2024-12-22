@@ -1,15 +1,12 @@
+
 import classNames from 'classnames/bind';
 
-import style from './MainPageUpload.module.scss';
+import style from './Upload.module.scss';
 import img_uploadVideo from '~/assets/images/uploadVideo.svg';
 import Button from '~/components/Button';
-import { IconCapCut, IconFile, IconFps, IconLight, IconProfile, IconVideo } from '~/components/Icons';
-import Menu from '~/components/Popper/menu';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleQuestion, faEarthAsia, faKeyboard, faSignOut } from '@fortawesome/free-solid-svg-icons';
+import { IconCapCut, IconFile, IconFps, IconLight, IconVideo } from '~/components/Icons';
 import Image from '~/components/img/Image';
-import { AuthContext } from '~/AuthContext/AuthContext';
-import { useContext, useEffect, useState } from 'react';
+
 
 const video_suggestion = [
     {
@@ -34,33 +31,11 @@ const video_suggestion = [
     },
 ];
 
-const menu = [
-    {
-        title: 'File',
-        icon: <IconProfile />,
-    },
-    {
-        title: 'Log out',
-        icon: <FontAwesomeIcon icon={faSignOut} />,
-    },
-];
-
 const cx = classNames.bind(style);
-function MainPageUpload() {
-    const authContext = useContext(AuthContext);
-
-    const logout = () => {
-        authContext.handleLogout();
-    };
+function Upload() {
 
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('header')}>
-                <Menu handleLogout={logout} items={menu} onChange={() => {}}>
-                    <Image className={cx('avt')} src="https://i.pinimg.com/564x/dd/2d/0a/dd2d0a59ad7e79453110b2968af72d89.jpg" alt="Avatar" />
-                </Menu>
-            </div>
-
             <div className={cx('content')}>
                 <div className={cx('card-1')}>
                     <div className={cx('select-video-container')}>
@@ -75,11 +50,11 @@ function MainPageUpload() {
                     <div className={cx('video-suggestion')}>
                         {video_suggestion.map((item, index) => (
                             <div className={cx('video-sgt-items')} key={index}>
-                                <div className={cx('icon')}>{item.icon}</div>
+                                <div className={cx('card-1-icon')}>{item.icon}</div>
 
                                 <div className={cx('video-sgt-content')}>
-                                    <h4 className={cx('title')}>{item.title}</h4>
-                                    <p className={cx('description')}>{item.description}</p>
+                                    <h4 className={cx('card-1-title')}>{item.title}</h4>
+                                    <p className={cx('card-1-description')}>{item.description}</p>
                                 </div>
                             </div>
                         ))}
@@ -87,12 +62,12 @@ function MainPageUpload() {
                 </div>
                 <div className={cx('card-2')}>
                     <div>
-                        <p className={cx('card-title')}>Create high quality videos on CapCut Online</p>
-                        <p className={cx('card-description')}>
+                        <p className={cx('card-2-title')}>Create high quality videos on CapCut Online</p>
+                        <p className={cx('card-2-description')}>
                             Automatically trim your videos and create videos from scripts with AI-powered features.
                         </p>
                     </div>
-                    <Button iconLeft={<IconCapCut width="1.6rem" height="1.6rem" />} className={cx('card-btn')}>
+                    <Button iconLeft={<IconCapCut width="1.6rem" height="1.6rem" />} className={cx('card-2-btn')}>
                         Try it now
                     </Button>
                 </div>
@@ -101,4 +76,4 @@ function MainPageUpload() {
     );
 }
 
-export default MainPageUpload;
+export default Upload;

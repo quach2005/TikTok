@@ -43,7 +43,7 @@ function Button({
         props.href = href;
         props.target = '_blank';
         Comp = 'a';
-    }
+    } 
 
     // Build the classes for the button
     const classes = cx('wrapper', {
@@ -59,7 +59,7 @@ function Button({
 
     // Render the button
     return (
-        <Comp className={classes} {...props} {...passProps}>
+        <Comp className={classes} {...props} {...passProps} >
             {iconLeft && <span className={cx('icon')}>{iconLeft}</span>}
             <span className={cx('title')}>{children}</span>
             {iconRight && <span className={cx('icon')}>{iconRight}</span>}
@@ -81,5 +81,6 @@ Button.propTypes = {
     iconRight: PropTypes.node,
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func,
+    toNavLink : PropTypes.string
 };
 export default Button;

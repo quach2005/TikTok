@@ -517,6 +517,26 @@ IconCapCut.prototype = {
     height: PropTypes.string
 }
 
+export const IconWaring = ({ className, width = "1rem", height = "1rem" }) => (
+    <svg
+        fill="currentColor"
+        className={className}
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+    >
+        <path opacity="0.9" d="M18.46 9.6c1.82-3.15 2.73-4.72 3.91-5.25a4 4 0 0 1 3.26 0c1.18.53 2.1 2.1 3.91 5.25l13.17 22.8c1.82 3.15 2.72 4.73 2.59 6.02a4 4 0 0 1-1.63 2.82c-1.05.76-2.87.76-6.5.76H10.83c-3.64 0-5.46 0-6.51-.76a4 4 0 0 1-1.63-2.82c-.13-1.3.78-2.87 2.6-6.02L18.45 9.6Zm7.33 8.26c0-.56 0-.84-.11-1.05a1 1 0 0 0-.44-.44c-.21-.1-.5-.1-1.05-.1h-.39c-.56 0-.84 0-1.05.1a1 1 0 0 0-.44.44c-.1.21-.1.5-.1 1.05v9.21c0 .56 0 .84.1 1.06a1 1 0 0 0 .44.43c.21.11.5.11 1.05.11h.39c.56 0 .84 0 1.05-.1a1 1 0 0 0 .44-.44c.1-.22.1-.5.1-1.06v-9.2Zm-3.47 17.6c.44.46 1 .68 1.68.68a2.28 2.28 0 0 0 2.35-2.32A2.28 2.28 0 0 0 24 31.46a2.28 2.28 0 0 0-2.36 2.36c0 .65.23 1.2.68 1.65Z"></path>
+    </svg>
+
+)
+
+IconWaring.prototype = {
+    classNames: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string
+}
+
 
 
 

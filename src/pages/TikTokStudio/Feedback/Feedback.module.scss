@@ -1,0 +1,30 @@
+.wrapper {
+    padding: 32px;
+    flex: 1;
+
+    .context {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+        border-radius: var(--border-rd);
+        padding: 24px;
+        display: flex;
+        flex-flow: column;
+        gap: 32px;
+
+        .header {
+            font-family: var(--font-family-bold);
+        }
+
+        .btn-send{
+            width: 200px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 0;
+        }
+    }
+
+    .pointer{
+        width: max-content;
+        cursor: not-allowed;
+    }
+}

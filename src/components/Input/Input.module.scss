@@ -1,0 +1,93 @@
+.wrapper {
+    width: 540px;
+    .card {
+        margin-top: 20px;
+        font-family: var(--font-family);
+
+        .title {
+            margin-bottom: 5px;
+        }
+
+        .description {
+            color: rgba(22, 24, 35, 0.65);
+        }
+
+        .input {
+            border: 1px solid rgba(22, 24, 35, 0.12);
+            margin-top: 6px;
+            display: flex;
+            flex-flow: column;
+            .textarea {
+                scrollbar-width: none;
+                box-sizing: border-box;
+                width: 100%;
+                padding: 12px;
+                box-sizing: border-box;
+                resize: none;
+                outline: none;
+                border: none;
+                background-color: transparent;
+            }
+            &:focus-within {
+                border: 1px solid rgba(22, 24, 35, 0.75);
+            }
+
+            .len-text {
+                padding-left: 12px;
+                font-size: 12px;
+
+                .count-len {
+                    color: rgba(22, 24, 35, 0.75);
+                }
+
+                .max-len {
+                    color: rgba(22, 24, 35, 0.34);
+                }
+                .out-in-len {
+                    color: red;
+                }
+            }
+        }
+       
+
+        .input-waring {
+            border: 1px solid red;
+            &:focus-within {
+                border: 1px solid red;
+            }
+        }
+
+        .input-waring-email {
+            border: 1px solid red;
+            &:focus-within {
+                border: 1px solid rgba(22, 24, 35, 0.75);
+            }
+        }
+
+        .waring {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            font-size: 12px;
+            color: red;
+        }
+
+        .waring-email{
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            font-size: 12px;
+            color: red;
+        }
+
+        .no-waring {
+            display: none;
+        }
+    }
+
+    .image{
+        width: 300px;
+        height: auto;
+        margin-top: 20px;
+    }
+}

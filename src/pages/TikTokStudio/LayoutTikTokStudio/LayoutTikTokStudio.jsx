@@ -9,11 +9,11 @@ const cx = classNames.bind(style);
 function LayoutTikTokStudio({ children }) {
     return (
         <div className={cx('wrapper')}>
-             <title>TikTok Studio</title>
+            <title>TikTok Studio</title>
             <HeaderUpload />
-            <div className={cx("body")}>
+            <div className={cx('body')}>
                 <SidebarUpload />
-                {children}
+                <div className={cx('children')}>{children}</div>
             </div>
         </div>
     );

@@ -1,7 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Menu.module.scss';
 import Button from '~/components/Button';
-import { memo } from 'react';
 
 const cx = classNames.bind(styles);
 

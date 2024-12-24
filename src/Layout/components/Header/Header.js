@@ -190,6 +190,7 @@ function Header({ currentUser }) {
     // handle logout
     const { handleLogout } = useContext(AuthContext);
 
+
     const [menu, setMenu] = useState(() => {
         if (currentUser) {
             return useMenu;

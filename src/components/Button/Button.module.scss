@@ -4,7 +4,6 @@
     font-size: 1.6rem;
     font-weight: 600;
     font-family: var(--font--family);
-    min-width: 100px;
     padding: 9px 16px;
     border-radius: 4px;
     border: 1px solid transparent;
@@ -49,6 +48,7 @@
 
     &:hover {
         text-decoration: underline;
+        color: var(--primary);
     }
 }
 

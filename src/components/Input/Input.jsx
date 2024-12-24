@@ -25,9 +25,16 @@ function Textarea({ data, onChange, index }) {
     useEffect(() => {
         if (index === 4) {
             Image && onChange(Image.preview, index);
+        } else if (index === 1) {
+            if (isValidEmail(text)) {
+                onChange(text, index);
+            }else{
+                onChange('', index);
+            }
         } else {
             onChange(text, index);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text, Image]);
 
     useEffect(() => {

@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
 import DefaultLayout from './Layout';
 import { AuthContext } from '~/AuthContext/AuthContext';
+import LayoutSignAndLogin from './pages/Login&Sign/Layout';
 function App() {
-    const { user } = useContext(AuthContext);
+    const { user, passedLogin } = useContext(AuthContext);
 
     return (
         <Router>
             <div className="App" translate='no'>
+                {passedLogin && <LayoutSignAndLogin />}
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         const Page = route.component;

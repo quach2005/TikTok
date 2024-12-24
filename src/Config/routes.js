@@ -13,7 +13,7 @@ const routes = {
     inspiration: '/tiktokstudio/inspiration',
     soundLibrary: '/tiktokstudio/sound-library',
     contactUs: '/tiktokstudio/help/contact-us',
-    academy : 'https://www.tiktok.com/creator-academy/'
+    academy : 'https://www.tiktok.com/creator-academy/',
     
 }
 

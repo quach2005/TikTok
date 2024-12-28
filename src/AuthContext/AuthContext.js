@@ -4,7 +4,7 @@ const AuthContext = createContext();
 
 function AuthContextProvider({children}) {
     const [user, setUser] = useState(false);
-    const [passedLogin, setPassedLogin] = useState(true);
+    const [passedLogin, setPassedLogin] = useState(false);
     const handleLogin = () => {
         setPassedLogin(true)
     }

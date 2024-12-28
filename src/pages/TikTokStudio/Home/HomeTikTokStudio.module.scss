@@ -1,11 +1,10 @@
 .wrapper {
-    padding: 32px;
     flex: 1;
 
     .user-info {
         height: 90px;
         background-color: white;
-        border: 1px solid rgba(0, 0, 0, 0.08);
+        border: var(--border-default);
         border-radius: 8px;
         padding: 20px;
         display: flex;
@@ -44,7 +43,7 @@
         }
     }
 
-    .spacer{
+    .spacer {
         height: 28px;
     }
 }

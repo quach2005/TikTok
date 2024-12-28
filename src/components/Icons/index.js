@@ -687,15 +687,49 @@ IconDelete.prototype = {
     height: PropTypes.string
 }
 
+export const IconFilter = ({ className, width = "1.6rem", height = "1.6rem" }) => (
+    <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+        role="img"
+        focusable="false"
+        dataicon="filter"
+        aria-hidden="true"
+        fill="currentColor"
+        willchange="auto"
+        transform="rotate(0)"
+    >
+        <path d="M2.999 6a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2zm2 5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2zm2 5a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2z"></path>
+    </svg>
+)
+
+IconFilter.prototype = {
+    classNames: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string
+}
 
 
+export const IconSearch = ({ className, width = "1.5rem", height = "1.5rem" }) => (
+    <svg
+        fill="currentColor"
+        color="inherit"
+        fontSize="15"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path fillRule="evenodd" clipRule="evenodd" d="M21.83 7.5a14.34 14.34 0 1 1 0 28.68 14.34 14.34 0 0 1 0-28.68Zm0-4a18.33 18.33 0 1 0 11.48 32.64l8.9 8.9a1 1 0 0 0 1.42 0l1.4-1.41a1 1 0 0 0 0-1.42l-8.89-8.9A18.34 18.34 0 0 0 21.83 3.5Z"></path>
+    </svg>
+)
 
-
-
-
-
-
-
-
-
-
+IconSearch.prototype = {
+    classNames: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string
+}

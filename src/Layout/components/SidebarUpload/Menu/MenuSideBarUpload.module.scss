@@ -23,14 +23,14 @@
     &:hover {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%),
             linear-gradient(92deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.04) 100%);
-        border: 1px solid rgba(0, 0, 0, 0.08);
+        border: var(--border-default);
     }
 }
 
 .active {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%),
         linear-gradient(92deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.04) 100%);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: var(--border-default);
 }
 
 .menu-wrapper {

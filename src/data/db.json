@@ -1,0 +1,30 @@
+{
+    "user": [
+        {
+            "username": "Phạm Quách",
+            "fullname": "Phạm Anh Quách",
+            "email": "phamquach2005py@gmail.com",
+            "phone_number": "0868375541",
+            "password": "Qu@ch10052005",
+            "profile_picture_url": "",
+            "bio": "",
+            "followers": [],
+            "following": [],
+            "likes_count": 0,
+            "videos_count": []
+        },
+        {
+            "username": "Phạm Quách",
+            "fullname": "Phạm Anh Quách",
+            "email": "phamquach2005py@gmail.com",
+            "phone_number": "0868375541",
+            "password": "Qu@ch10052005",
+            "profile_picture_url": "",
+            "bio": "",
+            "followers": [],
+            "following": [],
+            "likes_count": 0,
+            "videos_count": []
+        }
+    ]
+}

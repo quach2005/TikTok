@@ -11,7 +11,7 @@ import { AuthContext } from '~/AuthContext/AuthContext';
 
 const cx = classNames.bind(style);
 
-const SignItem = [
+const SignMenus = [
     {
         title: 'Sign up TikTok',
         data: [
@@ -43,17 +43,22 @@ const SignItem = [
     },
 ];
 
-const ListLoginItem = SignItem[0].data.map((item) => ({ ...item }));
-ListLoginItem.forEach((item) => {
-    if (item.title === 'Use phone number or email') {
-        item.fontSize = '1.5rem';
-        item.title = 'Use phone number/email/username';
+const handleLoginMenus = SignMenus[0].data.map((menu) => ({ ...menu }));
+handleLoginMenus.forEach((menu) => {
+    if (menu.title === 'Use phone number or email') {
+        menu.fontSize = '1.5rem';
+        menu.title = 'Use phone number/email/username';
+        menu.data = [
+            {
+
+            }
+        ]
     }
 });
 
 
 
-const LoginItem = [
+const LoginMenus = [
     {
         title: 'Login in to TikTok',
         data: [
@@ -61,20 +66,25 @@ const LoginItem = [
                 icon: <IconQR width="20" height="20" />,
                 title: 'Use QR code',
             },
-            ...ListLoginItem
+            ...handleLoginMenus
         ],
     },
 ];
 
-function LayoutSignAndLogin() {
-    const [change, setChange] = useState(true);
+function SignAndLogin() {
+    const [ChangeLoginOrSign, setChangeLoginOrSign] = useState(true);
 
     const {handlePassedLogin} = useContext(AuthContext);
+
+    const getForm = (data)=>{
+        console.log(data);
+        
+    }
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>
-                {change && <LoginAndSign data={LoginItem} />}
-                {!change && <LoginAndSign data={SignItem} />}
+                {ChangeLoginOrSign && <LoginAndSign menus={LoginMenus} getForm={getForm} />}
+                {!ChangeLoginOrSign && <LoginAndSign menus={SignMenus} getForm={getForm} />}
 
                 <p className={cx('policy')}>
                     By continuing to work with an account located in <span className={cx('key-work')}>Vietnam</span>,
@@ -82,9 +92,9 @@ function LayoutSignAndLogin() {
                     have read <span className={cx('key-work')}>our Privacy Policy</span>.
                 </p>
                 <div className={cx('footer')}>
-                    <p>{change?"Don't you have an acount?":"Already have an acount?"}</p>
-                    <Button text className={cx('btn-change')} onClick={() => setChange(!change)}>
-                        {change?"Register":"Log in"}
+                    <p>{ChangeLoginOrSign?"Don't you have an account?":"Already have an account?"}</p>
+                    <Button text className={cx('btn-change')} onClick={() => setChangeLoginOrSign(!ChangeLoginOrSign)}>
+                        {ChangeLoginOrSign?"Register":"Log in"}
                     </Button>
                 </div>
                 <Button className={cx('btn-close')} onClick={handlePassedLogin} >
@@ -96,4 +106,4 @@ function LayoutSignAndLogin() {
     );
 }
 
-export default LayoutSignAndLogin;
+export default SignAndLogin;

@@ -4,14 +4,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
 import DefaultLayout from './Layout';
 import { AuthContext } from '~/AuthContext/AuthContext';
-import LayoutSignAndLogin from './pages/Login&Sign/Layout';
+import SignAndLogin from './pages/Login&Sign';
+import LoadingProgress from './pages/Loading/LoadingProgress';
 function App() {
     const { user, passedLogin } = useContext(AuthContext);
 
     return (
         <Router>
             <div className="App" translate='no'>
-                {passedLogin && <LayoutSignAndLogin />}
+                <LoadingProgress />
+                {passedLogin && <SignAndLogin />}
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         const Page = route.component;

@@ -114,6 +114,14 @@ export const IconHomeActive = ({ className, width = "3.2rem", height = "3.2rem" 
     </svg>
 )
 
+IconHomeActive.propTypes = {
+    className: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string
+}
+
+
+
 export const IconFollowing = ({ className, width = "3.2rem", height = "3.2rem" }) => (
     <svg
         width={width}
@@ -729,6 +737,31 @@ export const IconSearch = ({ className, width = "1.5rem", height = "1.5rem" }) =
 )
 
 IconSearch.prototype = {
+    classNames: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string
+}
+
+export const IconChecked = ({ className, width = "1.6rem", height = "1.6rem" }) => (
+    <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+        role="img"
+        focusable="false"
+        data-icon="check-bold"
+        aria-hidden="true"
+        fill="currentColor"
+        will-change="auto"
+        transform="rotate(0)"
+    >
+        <path fillRule="evenodd" clipRule="evenodd" d="M19.871 7.104a1.25 1.25 0 0 1 .025 1.767l-8.678 8.927a1.35 1.35 0 0 1-1.936 0l-5.178-5.326a1.25 1.25 0 1 1 1.792-1.743l4.354 4.478 7.854-8.078a1.25 1.25 0 0 1 1.767-.025"></path>
+    </svg>
+)
+
+IconChecked.prototype = {
     classNames: PropTypes.string,
     width: PropTypes.string,
     height: PropTypes.string

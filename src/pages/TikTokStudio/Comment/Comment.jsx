@@ -1,22 +1,16 @@
 import classNames from 'classnames/bind';
 
 import style from './Comment.module.scss';
-import { IconFilter, IconSearch } from '~/components/Icons';
-import Button from '~/components/Button';
+import { IconSearch } from '~/components/Icons';
+import DropMenu from '~/components/DropMenu';
 const cx = classNames.bind(style);
 
-const ListMenu = [
+const Menus = [
     {
-        title: 'All comments',
+        titles: [{ title: 'All comments' }, { title: 'No answer yet' }, { title: 'Answered' }],
     },
     {
-        title: 'Posted by all',
-    },
-    {
-        title: 'Number of followers',
-    },
-    {
-        title: 'Comment date',
+        titles: [{ title: 'Posted by all' }, { title: 'Posted by follower' }, { title: 'Posted by non-follower' }],
     },
 ];
 
@@ -35,22 +29,20 @@ function Comment() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
-                <div className={cx('menu')}>
-                    {ListMenu.map((item, index) => (
-                        <Button key={index} iconLeft={<IconFilter />} className={cx('menu-item')}>
-                            {item.title}
-                        </Button>
+                <div className={cx('menu-drop')}>
+                    {Menus.map((menu_item, index) => (
+                        <DropMenu menus={menu_item.titles} key={index} index={index} className={cx('menu-item')} />
                     ))}
                 </div>
                 <div className={cx('search')}>
                     <IconSearch className={cx('icon')} />
-                    <input type="text" placeholder="Search for comments of usenames" />
+                    <input type="text" placeholder="Search for comments of usernames" />
                 </div>
             </div>
             <div className={cx('body')}>
-                <div className={cx('conten')}>
+                <div className={cx('content')}>
                     <div className={cx('components_EmptyState_AbsoluteCenter')}></div>
-
+                    
                     <div className={cx('components_EmptyState_AbsoluteCenter_3')}>
                         <div className={cx('components_EmptyState_div')}></div>
                         <div className={cx('components_EmptyState_FlexColumn')}>

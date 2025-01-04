@@ -7,14 +7,16 @@
         display: flex;
         justify-content: space-between;
 
-        .menu {
+        .menu-drop {
             display: flex;
+            gap: 8px;
             .menu-item {
                 padding: 0 12px;
                 height: 34px;
                 border: var(--border-default);
                 border-radius: var(--border-rd);
                 font-size: 14px;
+                color: black;
             }
         }
         .search {
@@ -55,7 +57,7 @@
         border: var(--border-default);
         border-radius: var(--border-rd);
         background-color: white;
-        .conten {
+        .content {
             width: 200px;
             height: 100px;
             position: relative;

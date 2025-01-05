@@ -3,16 +3,16 @@
     align-items: center;
     padding: 9px 16px;
     cursor: pointer;
-    &:hover{
-        background-color: rgba(22, 24, 35, 0.03);
+    &:hover {
+        background-color: var(--background-hover);
     }
 }
 
 .avt {
+    object-fit: cover;
+    border-radius: var(--border-circle);
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
 }
 
 .info {
@@ -20,17 +20,17 @@
     margin-left: 12px;
 }
 
-.name{
-    font-size: 1.6rem;  
+.name {
+    font-size: var(--font-size-large);
     font-weight: 600;
 }
 
-.check{
+.check {
     margin-left: 8px;
     color: rgba(32, 213, 236);
 }
 
-.username{
-    font-size: 1.4rem;
+.username {
+    font-size: var(--font-size-small);
     color: rgba(22, 24, 35, 0.5);
 }

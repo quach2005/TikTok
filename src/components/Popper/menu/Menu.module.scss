@@ -9,11 +9,11 @@
 .menu-items {
     display: flex;
     align-items: center;
-    width: 100%;
     margin-left: 0 !important;
-    text-align: start;
     border-radius: 0;
+    width: 100%;
     padding: 11px 16px;
+    text-align: start;
     &:hover {
         background-color: #f4f4f4;
     }
@@ -25,9 +25,9 @@
 
 .header{
     position: relative;
-    height: 50px;
-    margin-top: -8px;
     flex-shrink: 0;
+    margin-top: -8px;
+    height: 50px;
 }
 .back-btn{
     width: 50px;

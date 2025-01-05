@@ -1,56 +1,55 @@
-
 .wrapper {
-    font-size: 15px;
     position: absolute;
     z-index: 2;
     inset: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.359);
+    font-size: 15px;
     text-align: center;
-    flex-direction: column;
 
     .container {
         position: relative;
-        width: 100%;
-        max-width: 483px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #fff;
-        border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-bottom: 1px solid #e0e0e0;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 483px;
+        background-color: #fff;
 
         .policy {
+            width: 337px;
             padding: 20px 0;
             font-size: 12px;
             color: #9b9b9b;
-            width: 337px;
 
             .key-work {
-                color: black;
                 font-weight: 500;
+                color: var(--text-color);
             }
         }
     }
 
     .footer {
-        border-top: 1px solid #e0e0e0;
-        width: 100%;
-        padding-top: 20px;
         display: flex;
         justify-content: center;
         gap: 10px;
+        border-top: 1px solid #e0e0e0;
+        width: 100%;
+        padding-top: 20px;
 
         .btn-change {
-            color: var(--primary);
+            margin: 0;
             width: max-content;
             height: max-content;
             padding: 0;
-            margin: 0;
+            color: var(--primary);
         }
     }
     .btn-close {
@@ -59,13 +58,13 @@
     }
 
     .btn {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        border-radius: var(--border-circle);
         width: 35px;
         height: 35px;
         padding: 5px;
         background-color: #f0f0f0;
-        border-radius: 50%;
-        position: absolute;
-        top: 24px;
-        right: 24px;
     }
 }

@@ -1,20 +1,20 @@
 .wrapper {
-    padding: 20px 0;
     border-top: 1px solid #e3e3e4;
+    padding: 20px 0;
 
     .label {
-        font-size: 1.4rem;
         padding: 5px 0;
         font-family: var(--font-family);
+        font-size: var(--font-size-small);
     }
 
     .more-btn {
-        color: var(--primary);
-        font-size: 1.4rem;
         margin-top: 10px;
-        font-family: var(--font-family);
-        cursor: pointer;
         padding: 0px 10px;
+        cursor: pointer;
+        font-family: var(--font-family);
+        font-size: var(--font-size-small);
+        color: var(--primary);
     }
 }
 
@@ -27,20 +27,20 @@
 .account-item-wrapper {
     display: flex;
     align-items: center;
-    padding: 6px 10px;
     transition: background-color 0.2s ease-in-out;
+    padding: 6px 10px;
 
     &:hover {
-        background-color: rgba(22, 24, 35, 0.03);
-        cursor: pointer;
         border-radius: 4px;
+        background-color: var(--background-hover);
+        cursor: pointer;
     }
 }
 .avatar {
-    width: 32px;    
-    height: 32px;
-    border-radius: 50%;
+    border-radius: var(--border-circle);
     object-fit: cover;
+    width: 32px;
+    height: 32px;
 }
 .item-info {
     flex: 1;
@@ -49,18 +49,18 @@
         display: flex;
         align-items: center;
         .username {
-            font-size: 1.4rem;
+            font-size: var(--font-size-small);
             font-family: var(--font-family-bold);
         }
         .check {
             margin-left: 6px;
+            font-size: var(--font-size-small);
             color: #20d5ec;
-            font-size: 1.4rem;
         }
     }
     .name {
+        opacity: 0.75;
         font-size: 1.2rem;
         color: #161823;
-        opacity: 0.75;
     }
 }

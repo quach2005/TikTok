@@ -1,21 +1,20 @@
-.wrapper{
+.wrapper {
     display: flex;
     flex-flow: row;
 }
 
 .header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    height: 68px;
-    align-items: center;
     display: flex;
     flex-flow: row;
     flex: 1;
-    -webkit-box-pack: center;
     justify-content: end;
+    align-items: center;
+    border-bottom: var(--border-default);
+    height: 68px;
     padding: 0 32px;
 
     .avt {
-        border-radius: 50%;
+        border-radius: var(--border-circle);
         height: 36px;
         width: 36px;
         cursor: pointer;
@@ -23,16 +22,15 @@
 }
 
 .logo-header {
-    height: 68px;
-    width: 247px;
-    padding: 0px 19px 0px 20px;
     flex-shrink: 0;
     display: flex;
     flex-flow: row;
-    -webkit-box-align: center;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: var(--border-default);
+    border-right: var(--border-default);
+    width: 247px;
+    height: 68px;
+    padding: 0px 19px 0px 20px;
 
     .logo {
         width: 162px;

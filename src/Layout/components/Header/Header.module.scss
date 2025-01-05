@@ -7,24 +7,22 @@
 
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: var(--white);
-    height: var(--default-layout-header-height);
-    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    inset: 0;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    width: 100%;
+    height: var(--default-layout-header-height);
+    background-color: var(--white);
 }
 
 // Inner
 .inner {
-    height: 100%;
-    width: var(--default-layout-width);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: var(--default-layout-width);
+    height: 100%;
     padding: 0 var(--default-layout-horizontal-spacer);
 }
 // Logo link
@@ -34,11 +32,11 @@
 
 // More button
 .more-btn {
-    cursor: pointer;
-    font-size: 2rem;
     margin-left: 28px;
     padding: 4px 8px;
     background-color: transparent;
+    cursor: pointer;
+    font-size: 2rem;
 }
 // Actions
 .actions {
@@ -49,17 +47,17 @@
 .action-btn {
     display: flex;
     align-items: center;
-    background-color: transparent;
-    font-size: 2.2rem;
     padding: 4px 10px;
+    background-color: transparent;
     cursor: pointer;
+    font-size: 2.2rem;
 }
 // Current user avatar
 .current-user-avatar {
+    margin-left: 28px;
+    border-radius: var(--border-circle);
+    object-fit: cover;
     width: 32px;
     height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
     cursor: pointer;
-    margin-left: 28px;
 }

@@ -2,20 +2,19 @@
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    border-right: var(--border-default);
     width: 247px;
-    border-right: 1px solid rgba(0, 0, 0, 0.08);
     .Sidebar {
-        padding: 32px 19px 48px 20px;
-        -webkit-box-flex: 1;
         flex-grow: 1;
         display: flex;
-        font-size: 1.4rem;
         flex-flow: column;
+        padding: 32px 19px 48px 20px;
+        font-size: var(--font-size-small);
 
         .btn-upload {
+            border-radius: 8px;
             width: 208px;
             height: 36px;
-            border-radius: 8px;
 
             .content {
                 display: flex;
@@ -27,18 +26,18 @@
     }
 
     .footer {
-        padding: 20px;
-        margin-bottom: 18px;
-        font-size: 14px;
-        width: 100%;
-        gap: 5px;
         display: flex;
         align-items: center;
+        margin-bottom: 18px;
+        gap: 5px;
+        width: 100%;
         height: 36px;
+        padding: 20px;
+        font-size: var(--font-size-small);
         color: rgba(0, 0, 0, 0.65);
 
         &:hover {
-            color: black;
+            color: var(--text-color);
         }
     }
 }

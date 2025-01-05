@@ -1,10 +1,10 @@
 .wrapper {
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
+    margin-left: -20px;
     width: 356px;
     padding: 20px 8px 0px 16px;
-    margin-left: -20px;
-    overflow-y: hidden;
     height: calc(100vh - 60px);
    
     &:hover{

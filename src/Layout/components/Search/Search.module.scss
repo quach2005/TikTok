@@ -1,4 +1,4 @@
- // Search result    
+// Search result
 .search-result,
 // Search
 .search {
@@ -8,26 +8,25 @@
 // Search
 .search {
     position: relative;
+    display: flex;
+    border: 1.5px solid transparent;
+    border-radius: var(--search-border-radius);
     height: var(--search-height);
     padding-left: 16px;
-    display: flex;
     background-color: rgba(22, 24, 35, 0.06);
-    border-radius: var(--search-border-radius);
-    border: 1.5px solid transparent;
 
     input {
         flex: 1;
         height: 100%;
-        color: var(--black);
         padding-right: 40px;
-        font-size: 1.6rem;
-        caret-color: var(--primary);
         background-color: transparent;
+        font-size: var(--font-size-large);
+        caret-color: var(--primary);
+        color: var(--black);
     }
 
     input:not(:placeholder-shown) ~ .search-btn {
         color: rgba(22, 24, 35, 0.75);
-
     }
 
     &::after {
@@ -37,7 +36,7 @@
         right: var(--search-button-width);
         width: 1px;
         height: calc(var(--search-height) - var(--search-top-spacer) * 2);
-        background-color: rgba(22, 24, 35, 0.12);
+        background-color: var(--border-color);
     }
 
     &:focus-within {
@@ -48,8 +47,8 @@
 // Search title
 .search-title {
     padding: 5px 12px;
+    font-size: var(--font-size-small);
     color: rgba(22, 24, 35, 0.5);
-    font-size: 1.4rem;
 }
 
 // Clear and loading
@@ -67,12 +66,12 @@
 }
 
 @keyframes spinner {
-   from{
-    transform: translateY(-50%) rotate(0);
-   }
-   to{
-    transform: translateY(-50%) rotate(360deg);
-   }
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
 }
 
 // Search button
@@ -80,16 +79,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: var(--search-button-width);
-    height: 100%;
     border-top-right-radius: var(--search-border-radius);
     border-bottom-right-radius: var(--search-border-radius);
+    width: var(--search-button-width);
+    height: 100%;
     font-size: 2.4rem;
     color: rgba(22, 24, 35, 0.34);
 
     &:hover {
+        background-color: var(--background-hover);
         cursor: pointer;
-        background-color: rgba(22, 24, 35, 0.03);
     }
 
     &:active {

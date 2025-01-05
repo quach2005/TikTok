@@ -46,7 +46,7 @@ const SignMenus = [
 const handleLoginMenus = SignMenus[0].data.map((menu) => ({ ...menu }));
 handleLoginMenus.forEach((menu) => {
     if (menu.title === 'Use phone number or email') {
-        menu.fontSize = '1.5rem';
+        menu.fontSize = '1.2rem';
         menu.title = 'Use phone number/email/username';
         menu.data = [
             {

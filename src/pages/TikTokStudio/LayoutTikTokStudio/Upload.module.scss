@@ -7,10 +7,10 @@
         flex-flow: row;
         height: 710px;
         .children {
-            height: 710px;
-            width: 100%;
             overflow-y: scroll;
             scrollbar-width: none;
+            width: 100%;
+            height: 710px;
             padding: 32px;
         }
     }

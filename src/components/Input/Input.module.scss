@@ -13,19 +13,18 @@
         }
 
         .input {
-            border: 1px solid rgba(22, 24, 35, 0.12);
-            margin-top: 6px;
             display: flex;
             flex-flow: column;
+            margin-top: 6px;
+            border: 1px solid var(--border-color);
             .textarea {
                 scrollbar-width: none;
-                box-sizing: border-box;
-                width: 100%;
-                padding: 12px;
-                box-sizing: border-box;
                 resize: none;
                 outline: none;
                 border: none;
+                box-sizing: border-box;
+                width: 100%;
+                padding: 12px;
                 background-color: transparent;
             }
             &:focus-within {
@@ -48,7 +47,6 @@
                 }
             }
         }
-       
 
         .input-waring {
             border: 1px solid red;
@@ -72,7 +70,7 @@
             color: red;
         }
 
-        .waring-email{
+        .waring-email {
             display: flex;
             align-items: center;
             gap: 3px;
@@ -85,9 +83,9 @@
         }
     }
 
-    .image{
+    .image {
+        margin-top: 20px;
         width: 300px;
         height: auto;
-        margin-top: 20px;
     }
 }

@@ -15,15 +15,15 @@
             }
             Button {
                 background: none;
-                font-size: 14px;
+                font-size: var(--font-size-small);
                 font-weight: lighter;
                 color: rgba(0, 0, 0, 0.627);
             }
         }
 
         .check {
-            color: rgb(0, 0, 0) !important;
             font-weight: 900 !important;
+            color: rgb(0, 0, 0) !important;
         }
     }
 
@@ -36,10 +36,10 @@
                 position: absolute;
                 top: 2px;
                 right: 0;
-                border-radius: 50%;
+                z-index: 2;
+                border-radius: var(--border-circle);
                 width: 6px;
                 height: 6px;
-                z-index: 2;
                 background-color: var(--primary);
             }
         }

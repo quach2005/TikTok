@@ -205,6 +205,7 @@ function Header({ currentUser }) {
     }
 
     const logout = () => {
+        localStorage.clear();
         handleLogout();
     }
 

@@ -1,0 +1,66 @@
+.wrapper {
+    .menu-item {
+        padding: 5px 0;
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 3px 5px;
+            padding: 5px 15px;
+            font-size: 14px;
+
+            .check-box {
+                width: 16px;
+                height: 16px;
+                appearance: none;
+                border-radius: 4px;
+                border: 2px solid rgba(0, 0, 0, 0.17);
+
+                &:checked {
+                    background-color: var(--primary);
+                    border-color: var(--primary);
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 4px;
+                        height: 7px;
+                        border: solid white;
+                        border-width: 0 2px 2px 0; /* Tạo đường chéo */
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -60%) rotate(45deg); /* Căn giữa và xoay */
+                        display: inline-block;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: var(--background-default);
+                border-radius: var(--border-rd);
+            }
+        }
+        .menu:last-child {
+            border-top: 1px solid var(--background-default);
+            padding-top: 10px;
+            display: flex;
+
+            Button {
+                font-size: 14px;
+                padding: 0px 12px;
+                width: 64px;
+                height: 32px;
+                box-sizing: content-box;
+                border-radius: var(--border-rd);
+            }
+
+            Button:first-child {
+                color: black;
+            }
+            &:hover {
+                background: none;
+                border-radius: 0;
+            }
+        }
+    }
+}

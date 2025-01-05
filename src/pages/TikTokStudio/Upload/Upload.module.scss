@@ -3,60 +3,60 @@
     flex-flow: column;
 
     .card-1 {
-        height: 605px;
-        width: 100%;
-        background-color: white;
-        padding: 24px;
         border-radius: var(--border-rd);
         border: 1px solid rgba(0, 0, 0, 0.078431);
+        width: 100%;
+        height: 605px;
+        padding: 24px;
+        background-color: white;
         .select-video-container {
             display: flex;
             flex-flow: column;
             align-items: center;
             justify-content: center;
+            border-radius: var(--border-rd);
+            border: 1px dashed rgba(0, 0, 0, 0.078431);
             width: 100%;
             height: 460px;
             background-color: #faf9f9;
-            border-radius: var(--border-rd);
-            border: 1px dashed rgba(0, 0, 0, 0.078431);
             cursor: pointer;
             &:hover {
-                background: rgba(0, 117, 220, 0.06);
                 border: 1px dashed #0075dc;
+                background: rgba(0, 117, 220, 0.06);
             }
 
             .img-upload-video {
-                height: 72px;
                 width: 72px;
+                height: 72px;
             }
 
             .upload-stage-title {
-                font-size: 22px;
                 font-family: var(--font-family-bold);
+                font-size: 22px;
             }
 
             .upload-stage-sub-title {
                 font-family: var(--font-family);
-                font-size: 16px;
+                font-size: var(--font-size-large);
                 color: rgba(0, 0, 0, 0.48);
             }
 
             .upload-stage-btn {
+                margin-top: 20px;
+                box-sizing: content-box;
+                border-radius: var(--border-rd);
                 width: 184px;
                 height: 36px;
-                box-sizing: content-box;
-                margin-top: 20px;
                 padding: 0 12px;
-                border-radius: var(--border-rd);
             }
         }
 
         .video-suggestion {
-            height: 95px;
-            width: 100%;
-            padding-top: 32px;
             display: flex;
             gap: 16px;
+            width: 100%;
+            height: 95px;
+            padding-top: 32px;
 
             .video-sgt-items {
                 display: flex;
@@ -67,13 +67,13 @@
 
                 .card-1-title {
                     font-family: var(--font-family-bold);
-                    font-size: 16px;
+                    font-size: var(--font-size-large);
                 }
                 .card-1-description {
-                    color: rgba(0, 0, 0, 0.48);
                     margin-top: 5px;
                     font-size: 13px;
                     font-family: var(--font-family);
+                    color: rgba(0, 0, 0, 0.48);
                 }
             }
         }
@@ -81,19 +81,19 @@
 
     // Link CapCut
     .card-2 {
-        background-color: white;
-        height: 72px;
-        width: 100%;
-        padding: 16px;
+        display: flex;
+        justify-content: space-between;
         margin-top: 16px;
         border-radius: var(--border-rd);
         border: 1px solid rgba(0, 0, 0, 0.078431);
-        display: flex;
-        justify-content: space-between;
+        width: 100%;
+        height: 72px;
+        padding: 16px;
+        background-color: white;
 
         .card-2-title {
-            font-size: 14px;
             font-family: var(--font-family);
+            font-size: var(--font-size-small);
             font-weight: bolder;
         }
 
@@ -103,9 +103,9 @@
         }
 
         .card-2-btn {
-            background-color: rgba(0, 0, 0, 0.05);
             border-radius: var(--border-rd);
-            font-size: 14px;
+            font-size: var(--font-size-small);
+            background-color: var(--background-default);
 
             &:hover {
                 background-color: rgba(0, 0, 0, 0.1);

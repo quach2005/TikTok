@@ -11,7 +11,7 @@
 .avatar {
     width: 44px;
     height: 44px;
-    border-radius: 50%;
+    border-radius: var(--border-rd-circle);
 }
 .follow-btn {
     padding: 6px 16px;
@@ -27,32 +27,31 @@
         display: flex;
         align-items: center;
         .username {
-            font-size: 1.6rem;
+            font-size: var(--font-size-large);
             font-family: var(--font-family-bold);
         }
         .check {
             margin-left: 6px;
+            font-size: var(--font-size-small);
             color: #20d5ec;
-            font-size: 1.4rem;
         }
     }
     .name {
+        opacity: 0.85;
         font-size: 1.2rem;
         color: #161823;
-        opacity: 0.85;
     }
 }
-
 
 // Footer
 .footer {
     display: flex;
     gap: 12px;
     .label {
-        font-size: 1.4rem;
-        color: #161823;
         opacity: 0.5;
         margin-left: 6px;
+        font-size: var(--font-size-small);
+        color: #161823;
     }
     .value {
         font-size: 1.8rem;

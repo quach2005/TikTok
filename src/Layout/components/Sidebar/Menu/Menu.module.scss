@@ -1,21 +1,21 @@
 .wrapper {
     display: inline-flex;
     flex-direction: column;
-    width: 100%;
     margin-bottom: 16px;
+    width: 100%;
 }
 .menu-item {
     display: flex;
-    font-size: 1.8rem;
-    font-weight: 700;
-    border-radius: 4px;
     align-items: center;
+    transition: none;
+    border-radius: 4px;
     padding: 8px 0px;
     will-change: background-color;
-    transition: none;
-    
-    &:hover { 
-        background-color: rgba(22, 24, 35, 0.03);
+    font-weight: 700;
+    font-size: 1.8rem;
+
+    &:hover {
+        background-color: var(--background-hover);
     }
 
     &.active {
@@ -28,12 +28,10 @@
     }
 }
 
-
 .title {
     margin-left: 10px;
     font-family: var(--font-family-bold);
 }
-
 
 .active {
     color: #fe2c55;

@@ -1,15 +1,15 @@
 .wrapper {
     display: inline-flex;
     align-items: center;
-    font-size: 1.6rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 9px 16px;
+    font-size: var(--font-size-large);
     font-weight: 600;
     font-family: var(--font--family);
-    padding: 9px 16px;
-    border-radius: 4px;
-    border: 1px solid transparent;
+    user-select: none;
     cursor: pointer;
     background-color: var(--white);
-    user-select: none;
 
     &.disabled {
         pointer-events: none;
@@ -21,7 +21,8 @@
     }
 }
 
-.icon + .title, .title + .icon {
+.icon + .title,
+.title + .icon {
     margin-left: 8px;
 }
 .icon {
@@ -35,19 +36,18 @@
 .rounded {
     display: flex;
     justify-content: center;
-    color: rgba(22, 24, 35, 0.34);
     border-radius: 999px;
     box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
-    border-color: rgba(22, 24, 35, 0.12);
+    border-color: var(--border-color-default);
+    color: rgba(22, 24, 35, 0.34);
 
     &:hover {
         border-color: rgba(22, 24, 35, 0.2);
-        background-color: rgba(22, 24, 35, 0.03);
+        background-color: var(--background-hover);
     }
 }
 
 .text {
-
     &:hover {
         text-decoration: underline;
         color: var(--primary);
@@ -75,7 +75,6 @@
     }
 }
 
-
 //Button size
 .small {
     min-width: 88px;
@@ -86,7 +85,3 @@
     min-width: 140px;
     padding: 14px 16px;
 }
-
-
-
-

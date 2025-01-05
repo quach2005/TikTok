@@ -4,33 +4,33 @@
     gap: 20px;
 
     .title {
-        text-transform: uppercase;
         font-family: var(--font-family-bold);
         font-size: 10px;
+        text-transform: uppercase;
         color: rgba(0, 0, 0, 0.34);
     }
 }
 
 .menu-item {
     border-radius: 8px !important;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.65);
-    padding: 9px 10px !important;
     width: 208px;
     height: 36px;
+    padding: 9px 10px !important;
     background-color: #faf9f9;
+    font-size: var(--font-size-small);
+    color: rgba(0, 0, 0, 0.65);
 
     &:hover {
+        border: var(--border-default);
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%),
             linear-gradient(92deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.04) 100%);
-        border: var(--border-default);
     }
 }
 
 .active {
+    border: var(--border-default);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%),
         linear-gradient(92deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.04) 100%);
-    border: var(--border-default);
 }
 
 .menu-wrapper {

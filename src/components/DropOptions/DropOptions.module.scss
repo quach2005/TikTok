@@ -7,7 +7,7 @@
             gap: 12px;
             margin: 3px 5px;
             padding: 5px 15px;
-            font-size: 14px;
+            font-size: var(--font-size-small);
 
             .check-box {
                 width: 16px;
@@ -46,20 +46,20 @@
             display: flex;
 
             Button {
-                font-size: 14px;
-                padding: 0px 12px;
-                width: 64px;
-                height: 32px;
                 box-sizing: content-box;
                 border-radius: var(--border-rd);
+                width: 64px;
+                height: 32px;
+                padding: 0px 12px;
+                font-size: var(--font-size-small);
             }
 
             Button:first-child {
                 color: black;
             }
             &:hover {
-                background: none;
                 border-radius: 0;
+                background: none;
             }
         }
     }

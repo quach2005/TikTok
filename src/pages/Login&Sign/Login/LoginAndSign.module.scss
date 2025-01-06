@@ -1,19 +1,19 @@
 .wrapper {
-    padding: 64px 56px 0;
-
     width: 100%;
+    padding: 64px 56px 0;
     .title {
         font-family: var(--font-family-bold);
     }
 
     .login {
+        overflow-y: scroll;
         display: inline-flex;
         flex-direction: column;
         gap: 12px;
         overflow-y: scroll;
         margin-top: 16px;
-        width: 95%;
         height: 345px;
+        width: 95%;
         padding: 10px 0;
 
         &::-webkit-scrollbar {
@@ -27,9 +27,9 @@
             gap: 12px;
             margin-right: 5px;
             border-radius: var(--border-rd);
-            border: solid 1px var(--border-color-default);
-            padding: 0 16px;
+            border: solid 1px var(--border-color);
             height: 42px;
+            padding: 0 16px;
             cursor: pointer;
             .icon {
                 display: flex;

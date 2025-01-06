@@ -7,7 +7,6 @@
     display: flex;
     flex-flow: row;
     flex: 1;
-    -webkit-box-pack: center;
     justify-content: end;
     align-items: center;
     border-bottom: var(--border-default);
@@ -15,7 +14,7 @@
     padding: 0 32px;
 
     .avt {
-        border-radius: var(--border-rd-circle);
+        border-radius: var(--border-circle);
         height: 36px;
         width: 36px;
         cursor: pointer;
@@ -26,7 +25,6 @@
     flex-shrink: 0;
     display: flex;
     flex-flow: row;
-    -webkit-box-align: center;
     align-items: center;
     border-bottom: var(--border-default);
     border-right: var(--border-default);

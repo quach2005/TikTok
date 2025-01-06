@@ -6,14 +6,15 @@
         padding: 5px 0;
         font-size: var(--font-size-small);
         font-family: var(--font-family);
+        font-size: var(--font-size-small);
     }
 
     .more-btn {
         margin-top: 10px;
         padding: 0px 10px;
         cursor: pointer;
-        font-size: var(--font-size-small);
         font-family: var(--font-family);
+        font-size: var(--font-size-small);
         color: var(--primary);
     }
 }
@@ -32,13 +33,13 @@
 
     &:hover {
         border-radius: 4px;
-        cursor: pointer;
         background-color: var(--background-hover);
+        cursor: pointer;
     }
 }
 .avatar {
+    border-radius: var(--border-circle);
     object-fit: cover;
-    border-radius: var(--border-rd-circle);
     width: 32px;
     height: 32px;
 }

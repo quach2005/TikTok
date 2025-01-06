@@ -7,9 +7,7 @@
 
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
+    inset: 0;
     display: flex;
     justify-content: center;
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
@@ -56,10 +54,10 @@
 }
 // Current user avatar
 .current-user-avatar {
-    object-fit: cover;
     margin-left: 28px;
+    border-radius: var(--border-circle);
+    object-fit: cover;
     width: 32px;
     height: 32px;
-    border-radius: var(--border-rd-circle);
     cursor: pointer;
 }

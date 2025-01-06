@@ -1,30 +1,30 @@
 @import 'normalize.css';
 
 :root {
-    // text color
+    // Text
+    --font-family: 'ProximaNova', sans-serif;
+    --font-family-bold: 'ProximaNova_Bold', sans-serif;
+    --font-size-large: 1.6rem;
+    --font-size-small: 1.4rem;
+    
+    //Color
+    --white: #fff;
+    --primary: #fe2c55;
+    --black: #000;
+    --background-default: rgba(0, 0, 0, 0.05);
+    --background-hover: rgba(22, 24, 35, 0.03);
     --text-color: #333;
 
     // Default layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
     --default-layout-horizontal-spacer: 24px;
-    // color
-    --black: #000;
-    --primary: #fe2c55;
-    --white: #fff;
-    // font
-    --font-family: 'ProximaNova', sans-serif;
-    --font-family-bold: 'ProximaNova_Bold', sans-serif;
-    --font-size-small: 14rem;
-    --font-size-large: 16rem;
-    // border
+
+    // Border
     --border-rd: 8px;
     --border-default: 1px solid rgba(0, 0, 0, 0.08);
-    --border-color-default: rgba(22, 24, 35, 0.12);
-    --border-rd-circle: 50%;
-    // background
-    --background-default: rgba(0, 0, 0, 0.05);
-    --background-hover: rgba(22, 24, 35, 0.03);
+    --border-circle: 50%;
+    --border-color: rgba(22, 24, 35, 0.12);
 }
 
 // Font
@@ -36,7 +36,7 @@
 @font-face {
     src: url('../../Font/TikTokFont-Bold.woff2');
     font-family: 'ProximaNova_Bold';
-    font-weight: 700;
+    font-weight: 600;
 }
 
 // Reset
@@ -51,7 +51,7 @@ html {
 }
 
 body {
-    overflow-y: overlay;
+    font-family: var(--font-family);
     font-size: var(--font-size-large);
     line-height: 1.5;
     font-family: var(--font-family);
@@ -88,6 +88,10 @@ a {
 
 body {
     .tippy-box {
+        font-size: var(--font-size-large);
+        line-height: 1.5;
+        color: var(--white);
+        background-color: rgba(84, 84, 84, 0.92);
         border-radius: 8px;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
         font-size: var(--font-size-large);

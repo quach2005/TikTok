@@ -9,9 +9,9 @@
     justify-content: space-between;
 }
 .avatar {
+    border-radius: var(--border-circle);
     width: 44px;
     height: 44px;
-    border-radius: var(--border-rd-circle);
 }
 .follow-btn {
     padding: 6px 16px;

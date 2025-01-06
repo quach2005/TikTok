@@ -42,7 +42,6 @@ function Feedback() {
     const checkValue = (value, index) => {
         StatusAll[index] = value;
         setCheck(StatusAll.every(item => item.length !== 0));
-        console.log(StatusAll);
     };
 
     const handleSubmit =()=>{

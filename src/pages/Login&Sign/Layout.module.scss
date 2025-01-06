@@ -19,6 +19,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         border-bottom: 1px solid #e0e0e0;
+        border-radius: 10px;
         width: 100%;
         max-width: 483px;
         background-color: #fff;
@@ -31,7 +32,7 @@
 
             .key-work {
                 font-weight: 500;
-                color: black;
+                color: var(--text-color);
             }
         }
     }
@@ -61,7 +62,7 @@
         position: absolute;
         top: 24px;
         right: 24px;
-        border-radius: var(--border-rd-circle);
+        border-radius: var(--border-circle);
         width: 35px;
         height: 35px;
         padding: 5px;

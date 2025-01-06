@@ -7,12 +7,12 @@
 .menu-item {
     display: flex;
     align-items: center;
+    will-change: background-color;
     transition: none;
     border-radius: 4px;
     padding: 8px 0px;
-    will-change: background-color;
-    font-weight: 700;
     font-size: 1.8rem;
+    font-weight: 700;
 
     &:hover {
         background-color: var(--background-hover);
@@ -34,5 +34,5 @@
 }
 
 .active {
-    color: #fe2c55;
+    color: var(--primary);
 }

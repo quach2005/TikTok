@@ -8,13 +8,13 @@
         box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
         border-radius: var(--border-rd);
         padding: 24px;
-        background-color: white;
+        background-color: var(--white);
 
         .header {
             font-family: var(--font-family-bold);
         }
 
-        .btn-send{
+        .btn-send {
             border-radius: 0;
             width: 200px;
             padding-top: 15px;
@@ -22,7 +22,7 @@
         }
     }
 
-    .pointer{
+    .pointer {
         width: max-content;
         cursor: not-allowed;
     }

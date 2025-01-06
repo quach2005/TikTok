@@ -10,10 +10,10 @@
         border-radius: 8px;
         height: 90px;
         padding: 20px;
-        background-color: white;
+        background-color: var(--white);
 
         .user-avt {
-            border-radius: var(--border-rd-circle);
+            border-radius: var(--border-circle);
             width: 48px;
             height: 48px;
         }

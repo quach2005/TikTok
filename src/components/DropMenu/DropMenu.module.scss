@@ -22,8 +22,8 @@
         }
 
         .check {
-            color: rgb(0, 0, 0) !important;
             font-weight: 900 !important;
+            color: rgb(0, 0, 0) !important;
         }
     }
 
@@ -37,7 +37,7 @@
                 top: 2px;
                 right: 0;
                 z-index: 2;
-                border-radius: var(--border-rd-circle);
+                border-radius: var(--border-circle);
                 width: 6px;
                 height: 6px;
                 background-color: var(--primary);

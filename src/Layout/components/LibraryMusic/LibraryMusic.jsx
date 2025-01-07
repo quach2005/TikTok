@@ -114,7 +114,7 @@ function LibraryMusic() {
                             <Button
                                 rounded
                                 iconRight={<IconBack />}
-                                className={cx({ active: activeFilter === filterKey })}
+                                className={cx("btn",{ active: activeFilter === filterKey })}
                                 onClick={() => setActiveFilter((preview) => (preview === filterKey ? null : filterKey))}
                             >
                                 {filterKey}

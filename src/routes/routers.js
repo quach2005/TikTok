@@ -25,15 +25,14 @@ const publicRoutes = [
     { path: config.routes.search, component: Search },
     { path: config.routes.live, component: Live },
     { path: config.routes.error, component: Error, layout: null },
-    { path: config.routes.tiktokstudio, component : HomeTikTokStudio, layout:LayoutTikTokStudio},
-    { path: config.routes.upload, component: Upload, layout: LayoutTikTokStudio},
-    { path: config.routes.post, component: Post, layout: LayoutTikTokStudio},
-    { path: config.routes.analytics, component: Analytics, layout: LayoutTikTokStudio},
-    { path: config.routes.comment, component: Comment, layout: LayoutTikTokStudio},
-    { path: config.routes.inspiration, component: Inspiration, layout: LayoutTikTokStudio},
-    { path: config.routes.soundLibrary, component: SoundLib, layout: LayoutTikTokStudio},
-    { path: config.routes.contactUs, component: Feedback, layout: LayoutTikTokStudio},
-
+    { path: config.routes.tiktokstudio, component: HomeTikTokStudio, layout: LayoutTikTokStudio },
+    { path: config.routes.upload, component: Upload, layout: LayoutTikTokStudio },
+    { path: config.routes.post, component: Post, layout: LayoutTikTokStudio },
+    { path: config.routes.analytics, component: Analytics, layout: LayoutTikTokStudio },
+    { path: config.routes.comment, component: Comment, layout: LayoutTikTokStudio },
+    { path: config.routes.inspiration, component: Inspiration, layout: LayoutTikTokStudio },
+    { path: config.routes.soundLibrary, component: SoundLib, layout: LayoutTikTokStudio },
+    { path: config.routes.contactUs, component: Feedback, layout: LayoutTikTokStudio },
 ];
 
 const privateRoutes = [];

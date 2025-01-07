@@ -1,5 +1,5 @@
 
-import * as request from '~/utils/httpRequest'
+import * as request from '~/utils/httpRequestF8'
 const search = async (q, type = 'less') => {
     try {
         const res = await request.get(`users/search`, {

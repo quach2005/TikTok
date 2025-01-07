@@ -1,10 +1,11 @@
 import classNames from 'classnames/bind';
 
 import style from './Comment.module.scss';
-import { IconFilter, IconSearch } from '~/components/Icons';
+import { IconFilter } from '~/components/Icons';
 import DropMenu from '~/components/DropMenu';
 import DropOptions from '~/components/DropOptions';
 import Button from '~/components/Button';
+import Search from '~/components/Search/Search';
 const cx = classNames.bind(style);
 
 const Menus = [
@@ -34,18 +35,17 @@ const Options = [
         name: '>100K',
     },
     {
-        btn : [
+        btn: [
             {
-                name : "Erase",
-                type : "rounded"
+                name: 'Erase',
+                type: 'rounded',
             },
             {
-                name: "Apply",
-                type : "primary"
-
-            }
-        ]
-    }
+                name: 'Apply',
+                type: 'primary',
+            },
+        ],
+    },
 ];
 
 const EmptyState = [
@@ -67,21 +67,20 @@ function Comment() {
                     {Menus.map((menu_item, index) => (
                         <DropMenu menus={menu_item.data} key={index} index={index} className={cx('menu-item')} />
                     ))}
-                    <DropOptions placement="bottom-start" Options={Options} >
+                    <DropOptions
+                        placement="bottom-start"
+                        Options={Options}
+                        className={cx('menu-item')}
+                        iconLeft={<IconFilter />}
+                        title="Number of followers"
+                    ></DropOptions>
+                    <DropOptions placement="bottom-start" Options={[{ name: 'chua code' }]}>
                         <Button rounded iconLeft={<IconFilter />} className={cx('menu-item')}>
-                            Number of followers
-                        </Button>
-                    </DropOptions>
-                    <DropOptions placement="bottom-start" Options={[{name:"chua code"}]}>
-                        <Button rounded iconLeft={<IconFilter />} className={(cx('menu-item'))}>
                             Comment date
                         </Button>
                     </DropOptions>
                 </div>
-                <div className={cx('search')}>
-                    <IconSearch className={cx('icon')} />
-                    <input type="text" placeholder="Search for comments of usernames" />
-                </div>
+                <Search placeholder={"Search for comments of usernames"} width={"36rem"} height={"3.6rem"} />
             </div>
             <div className={cx('body')}>
                 <div className={cx('content')}>

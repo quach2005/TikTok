@@ -1,6 +1,16 @@
 .wrapper {
+    .container {
+        width: calc(100% * 1.2);
+        max-height: 380px;
+        font-family: var(--font-family);
+
+    }
     .menu-item {
+        overflow-y: scroll;
+        scrollbar-width: none;
+        max-height: 327px;
         padding: 5px 0;
+
         .menu {
             display: flex;
             align-items: center;
@@ -8,63 +18,95 @@
             margin: 3px 5px;
             padding: 5px 15px;
             font-size: var(--font-size-small);
-
-            .check-box {
-                appearance: none;
-                border-radius: 4px;
-                border: 2px solid rgba(0, 0, 0, 0.17);
-                width: 16px;
-                height: 16px;
-
-                &:checked {
-                    position: relative;
-                    border-color: var(--primary);
-                    background-color: var(--primary);
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -60%) rotate(45deg); /* Căn giữa và xoay */
-                        display: inline-block;
-                        border: solid var(--white);
-                        border-width: 0 2px 2px 0; /* Tạo đường chéo */
-                        width: 4px;
-                        height: 7px;
-                    }
-                }
-            }
-
             &:hover {
                 background-color: var(--background-default);
                 border-radius: var(--border-rd);
             }
         }
-        .menu:last-child {
-            border-top: 1px solid var(--background-default);
-            padding-top: 10px;
+    }
+
+    .change-icon {
+        span:first-child {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 2px;
+                right: 0;
+                z-index: 2;
+                border-radius: var(--border-circle);
+                width: 6px;
+                height: 6px;
+                background-color: var(--primary);
+            }
+        }
+    }
+
+    .footer-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid var(--background-default);
+        padding: 10px 0;
+        margin: 0 20px;
+
+        Button {
+            font-size: var(--font-size-small);
+            padding: 0px 12px;
+            width: 64px;
+            height: 32px;
+            box-sizing: content-box;
+            border-radius: var(--border-rd);
+            width: 64px;
+            height: 32px;
+            padding: 0px 12px;
+            font-size: var(--font-size-small);
+        }
+
+        Button:first-child {
+            color: var(--text-color);
+        }
+        &:hover {
+            border-radius: 0;
+            background: none;
+        }
+
+        .check-all {
             display: flex;
+            align-items: center; 
+            gap: 12px;
+            border: none !important;
+            user-select: none;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+    }
+}
 
-            Button {
-                font-size: var(--font-size-small);
-                padding: 0px 12px;
-                width: 64px;
-                height: 32px;
-                box-sizing: content-box;
-                border-radius: var(--border-rd);
-                width: 64px;
-                height: 32px;
-                padding: 0px 12px;
-                font-size: var(--font-size-small);
-            }
 
-            Button:first-child {
-                color: var(--text-color);
-            }
-            &:hover {
-                border-radius: 0;
-                background: none;
-            }
+.check-box {
+    appearance: none;
+    border-radius: 4px;
+    border: 2px solid rgba(0, 0, 0, 0.17);
+    width: 16px;
+    height: 16px;
+
+    &:checked {
+        position: relative;
+        border-color: var(--primary);
+        background-color: var(--primary);
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%) rotate(45deg); /* Căn giữa và xoay */
+            display: inline-block;
+            border: solid var(--white);
+            border-width: 0 2px 2px 0; /* Tạo đường chéo */
+            width: 4px;
+            height: 7px;
         }
     }
 }

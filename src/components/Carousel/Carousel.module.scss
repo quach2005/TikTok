@@ -1,0 +1,79 @@
+.music-playlist {
+
+    .music-playlist-header {
+        display: flex;
+        justify-content: space-between;
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        .music-playlist-pagination {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-family);
+            color: rgba(0, 0, 0, 0.65);
+
+            button {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                background-color: transparent;
+
+                .icon-next,
+                .icon-preview {
+                    width: 2rem;
+                    height: 2rem;
+                    transform: scale(1.2);
+                    opacity: 0.65;
+                }
+                .icon-next {
+                    transform: rotate(180deg) scale(1.2);
+                }
+                .disabled {
+                    color: rgba(0, 0, 0, 0.34);
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+
+    .music-playlist-list {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .music-playlist-item {
+            position: relative;
+            width: 220px;
+            height: 160px;
+
+            .img {
+                position: relative;
+                z-index: 1;
+                user-select: none;
+                object-fit: cover;
+                border-radius: 12px;
+                width: 208px;
+            }
+
+            .cover-back {
+                position: absolute;
+                top: 50%;
+                right: 0px;
+                transform: translateY(-50%);
+                transition: 0.2s;
+                border-radius: 12px;
+                width: 184px;
+                height: 134px;
+                background: rgba(0, 0, 0, 0.12);
+            }
+
+            &:hover {
+                .cover-back {
+                    box-shadow: rgba(0, 0, 0, 0.28) 6px 6px 20px 0px;
+                }
+            }
+        }
+    }
+}

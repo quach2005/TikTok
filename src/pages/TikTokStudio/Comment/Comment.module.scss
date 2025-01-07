@@ -23,33 +23,6 @@
                 }
             }
         }
-        .search {
-            display: flex;
-            align-items: center;
-            box-sizing: content-box;
-            border: var(--border-default);
-            border-radius: var(--border-rd);
-            width: 338px;
-            height: 34px;
-            padding: 0 10px;
-            background-color: var(--white);
-            .icon {
-                margin-right: 6px;
-                box-sizing: content-box;
-                padding: 2px;
-            }
-            input {
-                flex: 1;
-                height: 100%;
-                font-size: var(--font-size-large);
-                caret-color: var(--primary);
-
-                &::placeholder {
-                    font-family: var(--font-family);
-                    color: rgba(14, 13, 13, 0.535);
-                }
-            }
-        }
     }
     .body {
         display: flex;

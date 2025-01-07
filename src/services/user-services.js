@@ -1,5 +1,5 @@
 
-import * as request from '~/utils/httpRequest'
+import * as request from '~/utils/httpRequestF8'
 const getSuggest = async ({page , perPage }) => {
     try {
         const res = await request.get(`users/suggested`, {

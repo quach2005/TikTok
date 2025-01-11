@@ -9,7 +9,7 @@
     align-items: center;
     will-change: background-color;
     transition: none;
-    border-radius: 4px;
+    border-radius: var(--border-rd-small);
     padding: 8px 0px;
     font-size: 1.8rem;
     font-weight: 700;

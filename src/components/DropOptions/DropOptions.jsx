@@ -8,7 +8,17 @@ import Button from '../Button';
 import { useEffect, useRef, useState } from 'react';
 const cx = classNames.bind(style);
 
-function DropOptions({ placement = 'auto', Options = [], className, iconLeft, iconRight, title, change_icon = true, children }) {
+function DropOptions({
+    onChange = () => {},
+    placement = 'auto',
+    Options = [],
+    className,
+    iconLeft,
+    iconRight,
+    title,
+    change_icon = true,
+    children,
+}) {
     const refDropOptions = useRef([]);
     const refCheckAll = useRef(null);
     const [visible, setVisible] = useState(false);
@@ -20,13 +30,14 @@ function DropOptions({ placement = 'auto', Options = [], className, iconLeft, ic
 
     const handleApplyCheckBox = () => {
         const checkboxStates = refDropOptions.current.map((checkbox) => (checkbox ? checkbox.checked : false));
-        localStorage.setItem('Checkboxs_Apply', JSON.stringify(checkboxStates));
+        localStorage.setItem(`Checkboxs_Apply${title}`, JSON.stringify(checkboxStates));
         if (refCheckAll.current) {
             const checkAll = refCheckAll.current.checked;
-            localStorage.setItem('Checkboxs_Apply_All', JSON.stringify(checkAll));
+            localStorage.setItem(`Checkboxs_Apply_All${title}`, JSON.stringify(checkAll));
         }
 
         setStateOption(true);
+        onChange();
     };
 
     const handleCheckAll = () => {
@@ -36,7 +47,7 @@ function DropOptions({ placement = 'auto', Options = [], className, iconLeft, ic
     };
 
     const handleClickOutSide = () => {
-        const savedStates = JSON.parse(localStorage.getItem('Checkboxs_Apply'));
+        const savedStates = JSON.parse(localStorage.getItem(`Checkboxs_Apply${title}`));
         if (savedStates !== null) {
             savedStates.map((state, index) => {
                 if (refDropOptions.current[index]) {
@@ -47,11 +58,12 @@ function DropOptions({ placement = 'auto', Options = [], className, iconLeft, ic
             refDropOptions.current.forEach((ref) => (ref.checked = false));
         }
 
-        const stateCheckAll = JSON.parse(localStorage.getItem('Checkboxs_Apply_All'));
+        const stateCheckAll = JSON.parse(localStorage.getItem(`Checkboxs_Apply_All${title}`));
         if (refCheckAll.current) {
             refCheckAll.current.checked = stateCheckAll ? stateCheckAll : false;
         }
         handleShowMenu();
+        onChange();
     };
 
     const getStatusAllRefOptions = () => {
@@ -62,16 +74,17 @@ function DropOptions({ placement = 'auto', Options = [], className, iconLeft, ic
     const handleResetCheckBox = () => {
         setStateOption(false);
         refDropOptions.current.forEach((ref) => (ref.checked = false));
-        localStorage.removeItem('Checkboxs_Apply');
+        localStorage.removeItem(`Checkboxs_Apply${title}`);
         if (refCheckAll.current) {
             refCheckAll.current.checked = false;
-            localStorage.removeItem('Checkboxs_Apply_All');
+            localStorage.removeItem(`Checkboxs_Apply_All${title}`);
         }
+        onChange();
     };
 
     useEffect(() => {
-        const savedStates = JSON.parse(localStorage.getItem('Checkboxs_Apply'));
-        const stateCheckAll = JSON.parse(localStorage.getItem('Checkboxs_Apply_All'));
+        const savedStates = JSON.parse(localStorage.getItem(`Checkboxs_Apply${title}`));
+        const stateCheckAll = JSON.parse(localStorage.getItem(`Checkboxs_Apply_All${title}`));
         const awaiTime = setTimeout(() => {
             if (stateCheckAll) {
                 if (refCheckAll.current) {

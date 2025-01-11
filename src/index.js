@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyles from '~/components/GlobalStyles/GlobalStyles';
-import AuthContextProvider from '~/AuthContext/AuthContext';
+import AuthContextProvider from '~/Context/CheckLogin';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-       <AuthContextProvider>
+        <AuthContextProvider>
             <GlobalStyles>
                 <App />
             </GlobalStyles>
-       </AuthContextProvider>
+        </AuthContextProvider>
     </React.StrictMode>,
 );
 

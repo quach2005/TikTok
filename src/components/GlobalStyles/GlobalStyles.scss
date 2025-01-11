@@ -4,9 +4,11 @@
     // Text
     --font-family: 'ProximaNova', sans-serif;
     --font-family-bold: 'ProximaNova_Bold', sans-serif;
+    --font-family-semi-bold: 'ProximaNova_SemiBold', sans-serif;
     --font-size-large: 1.6rem;
     --font-size-small: 1.4rem;
-    
+    --font-size-min-small: 1.2rem;
+
     //Color
     --white: #fff;
     --primary: #fe2c55;
@@ -14,6 +16,7 @@
     --background-default: rgba(0, 0, 0, 0.05);
     --background-hover: rgba(22, 24, 35, 0.03);
     --text-color: #333;
+    --text-color-light: rgba(0, 0, 0, 0.65);
 
     // Default layout
     --default-layout-header-height: 60px;
@@ -22,6 +25,7 @@
 
     // Border
     --border-rd: 8px;
+    --border-rd-small: 4px;
     --border-default: 1px solid rgba(0, 0, 0, 0.08);
     --border-circle: 50%;
     --border-color: rgba(22, 24, 35, 0.12);
@@ -39,6 +43,12 @@
     font-weight: 600;
 }
 
+@font-face {
+    src: url('../../Font/TikTokFont-Semibold.woff2');
+    font-family: 'ProximaNova_SemiBold';
+    font-weight: 600;
+}
+
 // Reset
 * {
     margin: 0;
@@ -51,7 +61,6 @@ html {
 }
 
 body {
-    font-family: var(--font-family);
     font-size: var(--font-size-large);
     line-height: 1.5;
     font-family: var(--font-family);
@@ -65,7 +74,7 @@ html *::-webkit-scrollbar {
 }
 
 html *::-webkit-scrollbar-thumb {
-    border-radius: 4px;
+    border-radius: var(--border-rd-small);
     background-color: rgba(22, 24, 35, 0.06);
 }
 

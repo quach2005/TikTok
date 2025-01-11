@@ -9,8 +9,8 @@ function SuggestedAccounts({ label, data = [], onSeeAll, onSeeLess, index, didFo
     return (
         <div className={cx('wrapper')}>
             <p className={cx('label')}>{label}</p>
-            {data.map((account) => {
-                return <AccountItem data={account} key={account.id} didFollow={didFollow} />;
+            {data.map((account, index) => {
+                return <AccountItem data={account} key={index} didFollow={didFollow} />;
             })}
 
             <p className={cx('more-btn')} onClick={index <= 5 ? ()=> onSeeAll(didFollow) : ()=> onSeeLess(didFollow)}>

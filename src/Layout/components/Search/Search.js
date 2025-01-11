@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import TippyHeadless from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark, faMagnifyingGlass, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark, faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import * as searchServices from '~/services/Search-services'
 import style from './Search.module.scss'
@@ -10,6 +10,7 @@ import  AccountsItem  from "~/components/AccountsItem/index";
 import { useEffect, useRef, useState } from "react";
 import { useDebounce } from "~/Hooks";
 import { Link } from "react-router-dom";
+import { IconSearch } from "~/components/Icons";
 
 const cx = classNames.bind(style)
 function  Search() {
@@ -87,7 +88,7 @@ function  Search() {
                     {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
     
                     <Link to={`/search/${searchValue?searchValue:'keyword'}`} className={cx('search-btn')} onMouseDown={e => e.preventDefault()}>
-                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        <IconSearch />
                     </Link>
                 </div>
             </TippyHeadless>

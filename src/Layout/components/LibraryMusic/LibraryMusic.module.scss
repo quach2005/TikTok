@@ -1,8 +1,17 @@
+@mixin translate() {
+    transition: transform 300ms ease-in-out;
+    transform: rotate(-90deg);
+}
+
 .library-search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 16px;
     font-family: var(--font-family);
     .options {
         display: flex;
+        align-items: center;
         gap: 12px;
 
         .btn {
@@ -11,17 +20,49 @@
             height: 32px;
             padding: 0 12px;
             background-color: rgba(0, 0, 0, 0.05);
+            font-size: 15px;
+            color: var(--black);
 
             svg {
-                transition: transform 300ms ease-in-out;
-                transform: rotate(-90deg);
+                @include translate();
             }
         }
 
         .active {
             svg {
-                transform: rotate(90deg);
+                transform: rotate(90deg) !important;
             }
+        }
+
+        .sort-by {
+            display: flex;
+            align-items: center;
+            font-size: var(--font-size-large);
+            .btn {
+                padding: 0;
+                margin: 0;
+                border: none;
+                background: transparent;
+                box-shadow: none;
+            }
+
+            .icon-back {
+                display: flex;
+                align-items: center;
+                svg {
+                    @include translate();
+                }
+            }
+        }
+    }
+
+    .search {
+        font-size: 15px;
+
+        svg { 
+            width: 20px;
+            height: 20px;
+            color: rgba(0, 0, 0, .34);
         }
     }
 }

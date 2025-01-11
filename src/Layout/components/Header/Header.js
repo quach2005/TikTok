@@ -15,7 +15,7 @@ import { IconMessage, IconSend, IconUpload } from '~/components/Icons';
 import Image from '~/components/img';
 import Search from '../Search/Search';
 import config from '~/Config';
-import { AuthContext } from '~/AuthContext/AuthContext';
+import { AuthContext } from '~/Context/CheckLogin';
 
 const MENU_ITEMS = [
     {

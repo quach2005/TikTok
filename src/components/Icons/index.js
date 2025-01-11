@@ -766,3 +766,45 @@ IconChecked.prototype = {
     width: PropTypes.string,
     height: PropTypes.string
 }
+
+export const IconPlay = ({ className, width = "1em", height = "1em" }) => (
+    <svg
+        fill="currentColor"
+        color="var(--ui-shape-text-1-on-neutral)"
+        fontSize="20px"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path d="M45.08 25.84a4.5 4.5 0 0 0 0-3.67 4.82 4.82 0 0 0-1.75-1.91c-.7-.5-1.64-1.04-2.78-1.69L18.87 6.14c-1.12-.65-2.06-1.19-2.83-1.54a4.82 4.82 0 0 0-2.52-.55 4.5 4.5 0 0 0-3.16 1.84c-.53.73-.7 1.6-.78 2.45-.08.85-.08 1.93-.08 3.22v24.88c0 1.3 0 2.37.08 3.22.08.86.25 1.73.78 2.45a4.5 4.5 0 0 0 3.16 1.84c.9.1 1.74-.2 2.52-.55.77-.35 1.7-.89 2.83-1.53l21.68-12.44c1.14-.65 2.08-1.2 2.78-1.69.7-.5 1.38-1.08 1.75-1.9Z"></path>
+    </svg>
+)
+
+IconPlay.prototype = {
+    classNames: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string
+}
+
+export const IconCollect = ({ className, width = "2rem", height = "2rem" }) => (
+    <svg
+        fill="currentColor"
+        color="inherit"
+        font-size="20px"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        className={className}
+    >
+        <path d="M35 8H13a1 1 0 0 0-1 1v28.6l8.85-7.2a5 5 0 0 1 6.3 0L36 37.6V9a1 1 0 0 0-1-1ZM13 4h22a5 5 0 0 1 5 5v32.8a2 2 0 0 1-3.26 1.55l-12.1-9.84a1 1 0 0 0-1.27 0l-12.1 9.84A2 2 0 0 1 8 41.8V9a5 5 0 0 1 5-5Z"></path>
+    </svg>
+)
+
+IconCollect.prototype = {
+    classNames: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string
+}

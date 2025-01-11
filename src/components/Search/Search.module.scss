@@ -17,11 +17,23 @@
         background: transparent;
         font-size: var(--font-size-large);
         caret-color: var(--primary);
-
+        width: 100%;
         &::placeholder {
             font-family: var(--font-family);
             color: rgba(14, 13, 13, 0.535);
         }
+    }
+
+    // Loại bỏ thanh tăng giảm giá trị của input number
+    input[type='number'] {
+        -moz-appearance: textfield;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 }
 
@@ -29,5 +41,6 @@
     background-color: var(--background-default);
     &:focus-within {
         border: 2px solid var(--black);
+        background-color: var(--white);
     }
 }

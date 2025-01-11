@@ -1,0 +1,40 @@
+.account-item-wrapper {
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+    padding: 6px 10px;
+
+    .item-info {
+        flex: 1;
+        margin-left: 12px;
+        .nickname {
+            display: flex;
+            align-items: center;
+            .username {
+                font-size: var(--font-size-small);
+            }
+            .check {
+                margin-left: 6px;
+                font-size: var(--font-size-small);
+                color: #20d5ec;
+            }
+        }
+        .name {
+            opacity: 0.75;
+            font-size: 1.2rem;
+            color: #161823;
+        }
+    }
+
+    &:hover {
+        border-radius: var(--border-rd-small);
+        background-color: var(--background-hover);
+        cursor: pointer;
+    }
+}
+.avatar {
+    border-radius: var(--border-circle);
+    object-fit: cover;
+    width: 32px;
+    height: 32px;
+}

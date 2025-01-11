@@ -17,51 +17,19 @@
         font-size: var(--font-size-small);
         color: var(--primary);
     }
+
+    .user {
+        font-family: var(--font-family-bold);
+        p {
+            &:last-child {
+                font-family: var(--font-family);
+            }
+        }
+    }
 }
 
 .preview {
     width: 320px;
     min-height: 120px;
     background-color: var(--white);
-}
-
-.account-item-wrapper {
-    display: flex;
-    align-items: center;
-    transition: background-color 0.2s ease-in-out;
-    padding: 6px 10px;
-
-    &:hover {
-        border-radius: 4px;
-        background-color: var(--background-hover);
-        cursor: pointer;
-    }
-}
-.avatar {
-    border-radius: var(--border-circle);
-    object-fit: cover;
-    width: 32px;
-    height: 32px;
-}
-.item-info {
-    flex: 1;
-    margin-left: 12px;
-    .nickname {
-        display: flex;
-        align-items: center;
-        .username {
-            font-size: var(--font-size-small);
-            font-family: var(--font-family-bold);
-        }
-        .check {
-            margin-left: 6px;
-            font-size: var(--font-size-small);
-            color: #20d5ec;
-        }
-    }
-    .name {
-        opacity: 0.75;
-        font-size: 1.2rem;
-        color: #161823;
-    }
 }

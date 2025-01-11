@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { publicRoutes } from '~/routes';
 import DefaultLayout from './Layout';
-import { AuthContext } from '~/AuthContext/AuthContext';
+import { AuthContext } from '~/Context/CheckLogin';
 import SignAndLogin from './pages/Login&Sign';
 import LoadingProgress from './pages/Loading/LoadingProgress';
 function App() {

@@ -6,8 +6,7 @@ import { IconDelete } from '~/components/Icons';
 import { IconApple, IconFacebook, IconGoogle, IconKaKaoTalk, IconLine, IconProfile, IconQR } from '~/components/Icons';
 import LoginAndSign from './Login';
 import { useContext, useState } from 'react';
-import { AuthContext } from '~/AuthContext/AuthContext';
-
+import { AuthContext } from '~/Context/CheckLogin';
 
 const cx = classNames.bind(style);
 
@@ -48,15 +47,9 @@ handleLoginMenus.forEach((menu) => {
     if (menu.title === 'Use phone number or email') {
         menu.fontSize = '1.2rem';
         menu.title = 'Use phone number/email/username';
-        menu.data = [
-            {
-
-            }
-        ]
+        menu.data = [{}];
     }
 });
-
-
 
 const LoginMenus = [
     {
@@ -66,7 +59,7 @@ const LoginMenus = [
                 icon: <IconQR width="20" height="20" />,
                 title: 'Use QR code',
             },
-            ...handleLoginMenus
+            ...handleLoginMenus,
         ],
     },
 ];
@@ -74,12 +67,11 @@ const LoginMenus = [
 function SignAndLogin() {
     const [ChangeLoginOrSign, setChangeLoginOrSign] = useState(true);
 
-    const {handlePassedLogin} = useContext(AuthContext);
+    const { handlePassedLogin } = useContext(AuthContext);
 
-    const getForm = (data)=>{
+    const getForm = (data) => {
         console.log(data);
-        
-    }
+    };
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>
@@ -92,12 +84,12 @@ function SignAndLogin() {
                     have read <span className={cx('key-work')}>our Privacy Policy</span>.
                 </p>
                 <div className={cx('footer')}>
-                    <p>{ChangeLoginOrSign?"Don't you have an account?":"Already have an account?"}</p>
+                    <p>{ChangeLoginOrSign ? "Don't you have an account?" : 'Already have an account?'}</p>
                     <Button text className={cx('btn-change')} onClick={() => setChangeLoginOrSign(!ChangeLoginOrSign)}>
-                        {ChangeLoginOrSign?"Register":"Log in"}
+                        {ChangeLoginOrSign ? 'Register' : 'Log in'}
                     </Button>
                 </div>
-                <Button className={cx('btn-close')} onClick={handlePassedLogin} >
+                <Button className={cx('btn-close')} onClick={handlePassedLogin}>
                     <IconDelete width={'2.55rem'} height={'2.55rem'} className={cx('btn')} />
                 </Button>
                 <br />

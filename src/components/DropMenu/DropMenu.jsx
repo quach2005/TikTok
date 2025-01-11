@@ -2,30 +2,47 @@ import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
 
 import style from './DropMenu.module.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '../Button';
 import Wrapper from '../Popper/Wrapper';
-import { IconChecked, IconFilter } from '../Icons';
+import { IconChecked } from '../Icons';
 
 const cx = classNames.bind(style);
 
-function DropMenu({ menus = [], className, index }) {
-    const getValueMenuChecked = JSON.parse(localStorage.getItem('menu-checked' + index));
+function DropMenu({
+    menus = [],
+    className,
+    selected_dot = false,
+    iconRight,
+    iconLeft,
+    title,
+    onChange = () => {},
+    onClick = () => {},
+    description,
+}) {
+    const getValueMenuChecked = JSON.parse(localStorage.getItem('menu-checked' + title));
     const [menu, setMenu] = useState(getValueMenuChecked ?? menus[0]);
     const [visible, setVisible] = useState(false);
-
     const handleToggle = () => {
         setVisible((preview) => !preview);
+        onClick("SortBy");
     };
 
     const handleHide = () => {
+        onChange(menu.title);
         setVisible(false);
     };
 
     const handleMenu = (menu) => {
         setMenu(menu);
-        localStorage.setItem('menu-checked' + index, JSON.stringify(menu));
+        localStorage.setItem('menu-checked' + title, JSON.stringify(menu));
     };
+
+    useEffect(() => {
+        return () => {
+            setMenu(menus[0] ?? null);
+        };
+    }, []);
 
     return (
         <div className={cx('wrapper')}>
@@ -61,14 +78,16 @@ function DropMenu({ menus = [], className, index }) {
                     </div>
                 )}
             >
-                <div className={cx('menu-checked')}>
+                <div className={cx('menu-checked')} onClick={handleToggle}>
+                    {description}
+
                     <Button
-                        iconLeft={<IconFilter />}
+                        iconLeft={iconLeft}
+                        iconRight={iconRight}
                         rounded
                         className={cx(className, {
-                            'change-icon': menu.title !== menus[0].title,
+                            'change-icon': selected_dot && menu.title !== menus[0].title,
                         })}
-                        onClick={handleToggle}
                     >
                         {menu.title}
                     </Button>

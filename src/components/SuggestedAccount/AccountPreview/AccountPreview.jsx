@@ -44,7 +44,7 @@ function AccountPreview({ data, didFollow }) {
 }
 
 AccountPreview.prototype =  {
-    data: propTypes.object .isRequired
+    data: propTypes.object.isRequired
 }
 
 export default AccountPreview;

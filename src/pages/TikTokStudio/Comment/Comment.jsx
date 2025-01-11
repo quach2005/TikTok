@@ -8,14 +8,10 @@ import Button from '~/components/Button';
 import Search from '~/components/Search/Search';
 const cx = classNames.bind(style);
 
-const Menus = [
-    {
-        data: [{ title: 'All comments' }, { title: 'No answer yet' }, { title: 'Answered' }],
-    },
-    {
-        data: [{ title: 'Posted by all' }, { title: 'Posted by follower' }, { title: 'Posted by non-follower' }],
-    },
-];
+const Menus = {
+    Comments: [{ title: 'All comments' }, { title: 'No answer yet' }, { title: 'Answered' }],
+    Posted: [{ title: 'Posted by all' }, { title: 'Posted by follower' }, { title: 'Posted by non-follower' }],
+};
 
 const Options = [
     {
@@ -64,9 +60,18 @@ function Comment() {
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
                 <div className={cx('menu-drop')}>
-                    {Menus.map((menu_item, index) => (
-                        <DropMenu menus={menu_item.data} key={index} index={index} className={cx('menu-item')} />
-                    ))}
+                    {Object.keys(Menus).map((key, index) => {
+                        return (
+                            <DropMenu
+                                selected_dot
+                                iconLeft={<IconFilter />}
+                                title={key}
+                                menus={Menus[key]}
+                                key={index}
+                                className={cx('menu-item')}
+                            />
+                        );
+                    })}
                     <DropOptions
                         placement="bottom-start"
                         Options={Options}
@@ -80,7 +85,7 @@ function Comment() {
                         </Button>
                     </DropOptions>
                 </div>
-                <Search placeholder={"Search for comments of usernames"} width={"36rem"} height={"3.6rem"} />
+                <Search placeholder={'Search for comments of usernames'} width={'36rem'} height={'3.6rem'} icon />
             </div>
             <div className={cx('body')}>
                 <div className={cx('content')}>

@@ -1,7 +1,14 @@
 .wrapper {
+    .menu-checked{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+    }
     .menu-item {
         display: flex;
         width: calc(100% * 1.2);
+        min-height: auto;
         padding: 5px;
         .item {
             display: flex;
@@ -15,7 +22,6 @@
             }
             Button {
                 background: none;
-                font-size: var(--font-size-small);
                 font-weight: lighter;
                 color: rgba(0, 0, 0, 0.627);
             }

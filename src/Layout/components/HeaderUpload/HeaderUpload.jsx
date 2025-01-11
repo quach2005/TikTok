@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import { useContext } from 'react';
 
-import { AuthContext } from '~/AuthContext/AuthContext';
+import { AuthContext } from '~/Context/CheckLogin';
 import { IconProfile } from '~/components/Icons';
 import Menu from '~/components/Popper/menu';
 import Image from '~/components/img/Image';

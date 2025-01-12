@@ -77,7 +77,13 @@ const Body = ({ Musics = [] }) => {
                         <td>{formatDuration(Music.duration)}</td>
                         <td>English</td>
                         <td>
-                            <Tippy content="Add to Favorites" placement='top-start'>{<div><IconCollect /></div>}</Tippy>
+                            <Tippy content="Add to Favorites" placement="top-start">
+                                {
+                                    <div>
+                                        <IconCollect />
+                                    </div>
+                                }
+                            </Tippy>
                         </td>
                         <template className={cx('hover')}>
                             <IconPlay />
@@ -151,8 +157,12 @@ function ShowList({ titleTable = [], Data = {}, PageStart = 1, setPage = () => {
     useLayoutEffect(() => {
         for (let key in Data) {
             setMusics(Data[key]);
-            total = Data[key][keyPage].total;
-            totalPages = Data[key][keyPage].totalPages;
+            try {
+                total = Data[key][keyPage].total;
+                totalPages = Data[key][keyPage].totalPages;
+            } catch (error) {
+                console.log(error.message);
+            }
         }
     }, [Data]);
 

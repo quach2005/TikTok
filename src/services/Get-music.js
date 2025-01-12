@@ -35,8 +35,9 @@ export const getStyleMusic = async (singer_name, song_name) => {
         })
         return res;
     }
-    catch (err) {
-        console.log(err)
+    catch (error) {
+        console.log(error.message)
+
     }
 }
 

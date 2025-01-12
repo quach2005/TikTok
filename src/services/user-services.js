@@ -11,7 +11,7 @@ const getSuggest = async ({page , perPage }) => {
         return res.data
 
     } catch (error) {
-        console.log(error)
+        console.log(error.message)
     }
 }
 

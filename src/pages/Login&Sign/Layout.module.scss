@@ -33,6 +33,13 @@
             .key-work {
                 font-weight: 500;
                 color: var(--text-color);
+                cursor: pointer;
+                &:first-child:hover {
+                    text-decoration: none;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

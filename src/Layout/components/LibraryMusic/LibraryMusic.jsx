@@ -23,9 +23,10 @@ function LibraryMusic() {
 
     const getPage = (value) => {
         setPage(value);
-    }
+    };
 
     useEffect(() => {
+        console.warn('This API does not support music playback, we will update in the near future! Thank you');
         getPopularMusic(Page, Limit)
             .then((res) => {
                 setListMusic(res);
@@ -34,7 +35,7 @@ function LibraryMusic() {
                 console.log(err);
             })
             .finally(() => console.log('End!'));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [Page]);
 
     return (

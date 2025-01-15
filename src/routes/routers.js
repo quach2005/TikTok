@@ -24,7 +24,7 @@ const publicRoutes = [
     { path: config.routes.profile, component: Profile },
     { path: config.routes.search, component: Search },
     { path: config.routes.live, component: Live },
-    { path: config.routes.error, component: Error, layout: null },
+    { path: '/*', component: Error, layout: null },
     { path: config.routes.tiktokstudio, component: HomeTikTokStudio, layout: LayoutTikTokStudio },
     { path: config.routes.upload, component: Upload, layout: LayoutTikTokStudio },
     { path: config.routes.post, component: Post, layout: LayoutTikTokStudio },

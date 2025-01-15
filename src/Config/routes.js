@@ -4,7 +4,7 @@ const routes = {
     profile: '/@:nickname',
     search: '/search/:keyword',
     live: '/live',
-    error: '*',
+    error: '/404',
     tiktokstudio: '/tiktokstudio/',
     upload :'/tiktokstudio/upload',
     post : '/tiktokstudio/content',

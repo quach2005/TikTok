@@ -1,6 +1,8 @@
 .wrapper {
     display: flex;
     flex-flow: row;
+    z-index: 2;
+    background: #faf9f9;
 }
 
 .header {

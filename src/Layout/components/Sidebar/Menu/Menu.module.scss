@@ -11,7 +11,7 @@
     transition: none;
     border-radius: var(--border-rd-small);
     padding: 8px 0px;
-    font-size: 1.8rem;
+    font-size: var(--font-size-max-large);
     font-weight: 700;
 
     &:hover {

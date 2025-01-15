@@ -3,7 +3,7 @@
         display: flex;
         justify-content: space-between;
         h3 {
-            font-size: 1.8rem;
+            font-size: var(--font-size-max-large);
         }
 
         .music-playlist-pagination {
@@ -28,7 +28,7 @@
                 .icon-next {
                     transform: rotate(180deg) scale(1.2);
                 }
-                .disabled { 
+                .disabled {
                     opacity: 0.4;
                     cursor: not-allowed;
                 }

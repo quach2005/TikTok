@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable array-callback-return */
 import classNames from 'classnames/bind';
 
@@ -183,6 +184,7 @@ function DropOptions({
     return (
         <div className={cx('wrapper')}>
             <Tippy
+                zIndex={1}
                 visible={visible}
                 placement={placement}
                 interactive

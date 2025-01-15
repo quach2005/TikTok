@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
 
@@ -47,6 +48,7 @@ function DropMenu({
     return (
         <div className={cx('wrapper')}>
             <Tippy
+                zIndex={1}
                 visible={visible}
                 offset={[0, 10]}
                 placement="bottom-start"

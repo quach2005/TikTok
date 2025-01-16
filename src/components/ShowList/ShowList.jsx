@@ -155,7 +155,7 @@ const Footer = ({ totalPages, total, Page, setPage }) => {
                 {FirstPages()}
                 {Page > 4 && MAX_PAGE - Page > 3 && (
                     <>
-                        {showEllipsis(Math.max(MAX_PAGE, Page - 5))}
+                        {showEllipsis(Math.max(1, Page - 5))}
                         {MidPages()}
                     </>
                 )}

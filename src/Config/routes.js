@@ -5,7 +5,7 @@ const routes = {
     search: '/search/:keyword',
     live: '/live',
     error: '/404',
-    tiktokstudio: '/tiktokstudio/',
+    tiktokstudio: '/tiktokstudio/home',
     upload :'/tiktokstudio/upload',
     post : '/tiktokstudio/content',
     analytics : '/tiktokstudio/analytics',

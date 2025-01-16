@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 
-import style from './Upload.module.scss';
+import style from './LayoutTikTokStudio.module.scss';
 import SidebarUpload from '~/Layout/components/SidebarUpload';
 import HeaderUpload from '~/Layout/components/HeaderUpload/';
 import { useEffect } from 'react';

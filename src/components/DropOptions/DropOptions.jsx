@@ -107,8 +107,9 @@ function DropOptions({
         };
     }, []);
 
+
     const Render = () => {
-        return Options.map((item, index) => {
+        return Options?.map((item, index) => {
             if (item.btn) {
                 return;
             }
@@ -128,7 +129,7 @@ function DropOptions({
         });
     };
     const footer = () => {
-        return Options.map((item, index) => {
+        return Options?.map((item, index) => {
             if (item.check) {
                 return;
             }
@@ -184,6 +185,7 @@ function DropOptions({
     return (
         <div className={cx('wrapper')}>
             <Tippy
+                offset={[0,3]}
                 zIndex={1}
                 visible={visible}
                 placement={placement}
@@ -191,7 +193,10 @@ function DropOptions({
                 allowHTML={false}
                 onClickOutside={handleClickOutSide}
                 render={(attr) => (
-                    <div {...attr}>
+                    <div
+                        {...attr}
+                        className={cx('tippy-box')}
+                    >
                         <Wrapper className={cx('container')}>
                             <div className={cx('menu-item')}>{Render()}</div>
                             {footer()}
@@ -211,7 +216,7 @@ function DropOptions({
                                 'change-icon': change_icon && stateOption,
                             })}
                         >
-                            {title}
+                            {title??""}
                         </Button>
                     )}
                 </div>

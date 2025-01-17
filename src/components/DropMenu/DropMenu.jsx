@@ -26,7 +26,7 @@ function DropMenu({
     const [visible, setVisible] = useState(false);
     const handleToggle = () => {
         setVisible((preview) => !preview);
-        onClick("SortBy");
+        onClick('SortBy');
     };
 
     const handleHide = () => {
@@ -44,18 +44,20 @@ function DropMenu({
             setMenu(menus[0] ?? null);
         };
     }, []);
-
+    if (!menu) {
+        return <></>;
+    }
     return (
         <div className={cx('wrapper')}>
             <Tippy
                 zIndex={1}
                 visible={visible}
-                offset={[0, 10]}
+                offset={[0, 3]}
                 placement="bottom-start"
                 interactive
                 onClickOutside={handleHide}
                 render={(attrs) => (
-                    <div {...attrs} tabIndex={-1}>
+                    <div {...attrs} tabIndex={-1} className={cx('tippy-box')}>
                         <Wrapper className={cx('menu-item')}>
                             {menus.map((item, index) => (
                                 <div

@@ -1,4 +1,5 @@
 .wrapper {
+    width: max-content;
     .menu-checked{
         display: flex;
         align-items: center;
@@ -36,7 +37,7 @@
     .change-icon {
         span:first-child {
             position: relative;
-
+            
             &::before {
                 content: '';
                 position: absolute;
@@ -49,5 +50,8 @@
                 background-color: var(--primary);
             }
         }
+    }
+    .tippy-box {
+        animation: var(--scale-top);
     }
 }

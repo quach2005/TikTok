@@ -1,5 +1,7 @@
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
+import { followCursor } from 'tippy.js';
+import { Link } from 'react-router-dom';
 
 import config from '~/Config';
 import CardProfile from '~/components/CardProfile';
@@ -88,17 +90,21 @@ const KeyFigures = () => {
             <div className={cx('view')}>
                 {dataView.map((data) => (
                     <Tippy
-                        
+                        plugins={[followCursor]}
+                        followCursor='horizontal'
+                        duration={[200, 500]}
+                        delay={[200,0]}
                         key={data.name}
                         appendTo={'parent'}
                         content={data.tooltipText}
                         placement="top"
                         className={cx('tippy-box')}
+                        theme="light"
                         interactive
                     >
-                        <div className={cx('view-item')}>
+                        <Link to={config.routes.analytics} className={cx('view-item')}>
                             <View data={data} />
-                        </div>
+                        </Link>
                     </Tippy>
                 ))}
             </div>

@@ -9,7 +9,7 @@
     cursor: pointer;
     font-weight: 600;
     font-family: var(--font--family);
-
+    
     &.disabled {
         pointer-events: none;
         opacity: 0.5;
@@ -57,7 +57,7 @@
 .primary {
     display: inline-flex;
     justify-content: center;
-    background-color: var(--primary);
+    background-color: var(--primary) !important;
     color: var(--white);
     &:hover {
         border-color: var(--primary);

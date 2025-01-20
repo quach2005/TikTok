@@ -23,7 +23,7 @@ const menu = [
             {
                 icon: <IconHome width="2rem" height="2rem" />,
                 title: 'Home',
-                toNavLink: config.routes.tiktokstudio,
+                toNavLink: config.routes.studioHome,
             },
             {
                 icon: <IconPost width="1.8rem" height="1.8rem" />,
@@ -68,13 +68,13 @@ const menu = [
             {
                 icon: <IconMail width="1.8rem" height="1.8rem" />,
                 title: 'Feedback',
-                toNavLink: config.routes.contactUs,
+                toNavLink: config.routes.help + '/' + config.routes.contactUs,
             },
         ],
     },
 ];
 
-function Menu() {
+function MenuSideBarUpload() {
     return (
         <div className={cx('wrapper')}>
             {menu.map((item) => (
@@ -86,9 +86,15 @@ function Menu() {
                                 <MenuItem data={item} className={cx('menu-item')} key={index} />
                             ) : (
                                 <NavLink to={item.toNavLink}>
-                                    {({ isActive }) => <MenuItem data={item} className={cx('menu-item',{
-                                        "active":isActive
-                                    })} key={index} />}
+                                    {({ isActive }) => (
+                                        <MenuItem
+                                            data={item}
+                                            className={cx('menu-item', {
+                                                active: isActive,
+                                            })}
+                                            key={index}
+                                        />
+                                    )}
                                 </NavLink>
                             )}
                         </div>
@@ -99,4 +105,4 @@ function Menu() {
     );
 }
 
-export default Menu;
+export default MenuSideBarUpload;

@@ -184,7 +184,7 @@ const useMenu = [
 ]
 
 const cx = classNames.bind(styles);
-function Header({ currentUser }) {
+function Header({ userLogin }) {
     // handle login
     const { handleLogin } = useContext(AuthContext);
     // handle logout
@@ -192,7 +192,7 @@ function Header({ currentUser }) {
 
 
     const [menu, setMenu] = useState(() => {
-        if (currentUser) {
+        if (userLogin) {
             return useMenu;
         }
         return MENU_ITEMS;
@@ -213,8 +213,8 @@ function Header({ currentUser }) {
     }
 
     useEffect(() => {
-        setMenu(currentUser ? useMenu : MENU_ITEMS);
-    }, [currentUser]);
+        setMenu(userLogin ? useMenu : MENU_ITEMS);
+    }, [userLogin]);
 
 
     return (
@@ -230,9 +230,9 @@ function Header({ currentUser }) {
 
                 {/* actions */}
                 <div className={cx('actions')}>
-                    {!currentUser ? (
+                    {!userLogin ? (
                         <>
-                            <Button text to={config.routes.upload} >Upload</Button>
+                            <Button text to={config.routes.tiktokstudio + '/' + config.routes.upload} >Upload</Button>
                             <Button primary onClick={login} >Log In</Button>
                         </>
                     ) : (
@@ -244,7 +244,7 @@ function Header({ currentUser }) {
                                 content="Upload video"
                                 placement='bottom'
                             >
-                                <Link to={config.routes.upload} className={cx('action-btn')}>
+                                <Link to={config.routes.tiktokstudio + '/' + config.routes.upload} className={cx('action-btn')}>
                                     <IconUpload />
                                 </Link>
                             </Tippy>
@@ -280,7 +280,7 @@ function Header({ currentUser }) {
                         items={menu}
                         onChange={handleChange}
                     >
-                        {!currentUser ? (
+                        {!userLogin ? (
                             <button className={cx('more-btn')}><FontAwesomeIcon icon={faEllipsisVertical} /></button>
                         ) : (
                             <Image

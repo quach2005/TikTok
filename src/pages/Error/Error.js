@@ -133,12 +133,12 @@ function Error() {
     const navigate = useNavigate()
     const { user } = useContext(AuthContext);
     const [error, setError] = useState(true);
+
     useEffect(() => {
         const time = setTimeout(() => {
             setError(false);
         }, 1000)
-        navigate(config.routes.error);
-
+        navigate('/404')
         return () => {
             clearTimeout(time);
         }

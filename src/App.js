@@ -1,40 +1,37 @@
-import { Fragment, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import { publicRoutes } from '~/routes';
-import DefaultLayout from './Layout';
-import { AuthContext } from '~/Context/CheckLogin';
-import SignAndLogin from './pages/Login&Sign';
-import LoadingProgress from './pages/Loading/LoadingProgress';
+import LoadingProgress from './pages/Main/Loading';
+import NoInternet from './pages/NoInternet';
 function App() {
-    const { user, passedLogin } = useContext(AuthContext);
+    const [isOnline, setisOnline] = useState(navigator.onLine);
+    useEffect(() => {
+        window.addEventListener('online', () => setisOnline(true));
+        window.addEventListener('offline', () => setisOnline(false));
 
+        return () => {
+            window.addEventListener('online', () => setisOnline(true));
+            window.addEventListener('offline', () => setisOnline(false));
+        };
+    })
+
+    const renderRoutes = (pages = []) => (
+        pages.map((route, index) =>
+            <Route key={index} path={route.path} element={<route.element />} >
+                {route.index && <Route index element={<route.element />} />}
+                {route.children && renderRoutes(route.children)}
+            </Route>
+        )
+    )
+    if (!isOnline) {
+        return <NoInternet />
+    }
     return (
         <Router>
             <div className="App" translate='no'>
                 <LoadingProgress />
-                {passedLogin && <SignAndLogin />}
                 <Routes>
-                    {publicRoutes.map((route, index) => {
-                        const Page = route.component;
-                        let Layout = DefaultLayout;
-
-                        if (route.layout) {
-                            Layout = route.layout;
-                        } else if (route.layout === null) {
-                            Layout = Fragment;
-                        }
-
-                        return (
-                            <Route
-                                key={index}
-                                path={route.path}
-                                element={
-                                    Layout === Fragment ? <Page /> : <Layout currentUser={user}><Page /></Layout>
-                                }
-                            />
-                        );
-                    })}
+                    {renderRoutes(publicRoutes)}
                 </Routes>
             </div>
         </Router>

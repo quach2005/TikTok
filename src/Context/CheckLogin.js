@@ -3,22 +3,22 @@ import { createContext, useState } from "react";
 const AuthContext = createContext();
 
 function AuthContextProvider({children}) {
-    const [user, setUser] = useState(false);
+    const [userLogin, setUserLogin] = useState(false);
     const [passedLogin, setPassedLogin] = useState(false);
     const handleLogin = () => {
         setPassedLogin(true)
     }
 
     const handleLogout = () => {
-        setUser(false);
+        setUserLogin(false);
     }
     const handlePassedLogin = () => {
         setPassedLogin(false);
-        setUser(true);
+        setUserLogin(true);
     }
 
     return (
-        <AuthContext.Provider value={{user,passedLogin, handleLogin, handleLogout, handlePassedLogin}}>
+        <AuthContext.Provider value={{userLogin,passedLogin, handleLogin, handleLogout, handlePassedLogin}}>
             {children}
         </AuthContext.Provider>
     );

@@ -11,7 +11,7 @@ function LoginAndSign({ menus, getForm }) {
                     <title>{menu.title}</title>
                     <h1 className={cx('title')}>{menu.title}</h1>
                     <div className={cx('login')}>
-                        {menu.data.map((item, index) => (
+                        {menu?.data?.map((item, index) => (
                             <div key={index} className={cx('login-item')} onClick={()=> getForm(item.data)}>
                                 <div className={cx('icon')}>{item.icon}</div>
                                 <p className={cx('item-title')} style={{ fontSize: item.fontSize }}>

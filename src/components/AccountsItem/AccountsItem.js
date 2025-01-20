@@ -8,9 +8,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from '~/components/img'
 
 const cx = classNames.bind(style)
-function AccountsItem({ data }) {
+function AccountsItem({ data, onClick = ()=>{} }) {
     return (
-        <Link to={`/@${data.nickname}`} className={cx('wrapper')}>
+        <Link to={`profile/@${data.nickname}`} className={cx('wrapper')} onClick={onClick}>
             <Image
                 src={data.avatar}
                 alt={data.full_name}

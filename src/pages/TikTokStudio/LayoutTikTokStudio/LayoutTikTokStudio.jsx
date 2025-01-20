@@ -4,10 +4,11 @@ import style from './LayoutTikTokStudio.module.scss';
 import SidebarUpload from '~/Layout/components/SidebarUpload';
 import HeaderUpload from '~/Layout/components/HeaderUpload/';
 import { useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
 
 const cx = classNames.bind(style);
 
-function LayoutTikTokStudio({ children }) {
+function LayoutTikTokStudio() {
     useEffect(() => {
         return () => {
             localStorage.clear();
@@ -19,7 +20,9 @@ function LayoutTikTokStudio({ children }) {
             <HeaderUpload />
             <div className={cx('body')}>
                 <SidebarUpload />
-                <div className={cx('children')}>{children}</div>
+                <div className={cx('children')}>
+                    <Outlet />
+                </div>
             </div>
         </div>
     );

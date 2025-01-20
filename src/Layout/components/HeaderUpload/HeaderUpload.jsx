@@ -34,7 +34,7 @@ function HeaderUpload() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('logo-header')}>
-                <Link to={config.routes.tiktokstudio}>
+                <Link to={config.routes.studioHome}>
                     <Image src={logoUpload} alt="Logo Upload" className={cx('logo')} />
                 </Link>
             </div>

@@ -1,28 +1,29 @@
 import classNames from 'classnames/bind';
-import PropTypes from 'prop-types';
+import { Outlet } from 'react-router-dom';
+import { useContext } from 'react';
 
-import  Header  from '../components/Header';
+import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import styles from './DefaultLayout.module.scss';
+import { AuthContext } from '~/Context/CheckLogin';
+import UseState from '~/pages/Login&Sign';
 
 const cx = classNames.bind(styles);
+function DefaultLayout() {
+    const { userLogin, passedLogin } = useContext(AuthContext);
 
-
-function DefaultLayout({ children, currentUser }) {
     return (
         <div className={cx('wrapper')}>
             <title>TikTok - Make your day</title>
-            <Header currentUser={currentUser} />
+            <Header userLogin={userLogin}/>
             <div className={cx('container')}>
-                <Sidebar currentUser={currentUser} />
-                <div className={cx('content')}>{children}</div>
+                <Sidebar userLogin={userLogin} />
+                <div className={cx('content')}>
+                    <Outlet />
+                </div>
             </div>
+            {passedLogin && <UseState />}
         </div>
     );
 }
-
-DefaultLayout.propTypes = {
-    children: PropTypes.node.isRequired
-}
-
 export default DefaultLayout;

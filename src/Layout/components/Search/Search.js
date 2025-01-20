@@ -67,7 +67,7 @@ function  Search() {
                                 Accounts
                             </h4>
                             {searchResult.map(result => (
-                                <AccountsItem key={result.id} data={result} />
+                                <AccountsItem key={result.id} data={result} onClick={handleHideResult} />
                             ))}
                         </PopperWrapper>
                     </div>

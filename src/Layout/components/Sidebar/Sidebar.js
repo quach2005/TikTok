@@ -12,7 +12,7 @@ const cx = classNames.bind(styles);
 const INIT_PAGE = 1;
 const PER_PAGE = 5;
 
-function Sidebar({ currentUser }) {
+function Sidebar({userLogin}) {
     const [suggest, setSuggest] = useState([])
     const [follows, setFollows] = useState([])
 
@@ -69,8 +69,8 @@ function Sidebar({ currentUser }) {
                 <MenuItem title='Following' to={config.routes.following} icon={<IconFollowing />} activeIcon={<IconFollowingActive />} />
                 <MenuItem title='LIVE' to={config.routes.live} icon={<IconLive />} activeIcon={<IconLiveActive />} />
             </Menu>
-            {currentUser && <SuggestedAccount label='Suggested accounts' data={suggest} onSeeAll={handleSeeAll} onSeeLess={handleSeeLess} index={pageSuggest} />}
-            {currentUser && <SuggestedAccount label='Following accounts' data={follows} onSeeAll={handleSeeAll} onSeeLess={handleSeeLess} index={pageFollows} didFollow = {true}/>}
+            {userLogin && <SuggestedAccount label='Suggested accounts' data={suggest} onSeeAll={handleSeeAll} onSeeLess={handleSeeLess} index={pageSuggest} />}
+            {userLogin && <SuggestedAccount label='Following accounts' data={follows} onSeeAll={handleSeeAll} onSeeLess={handleSeeLess} index={pageFollows} didFollow = {true}/>}
         </aside>
     );
 }

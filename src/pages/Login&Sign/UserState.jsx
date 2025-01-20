@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 
-import style from './Layout.module.scss';
+import style from './UserState.module.scss';
 import Button from '~/components/Button';
 import { IconDelete } from '~/components/Icons';
 import { IconApple, IconFacebook, IconGoogle, IconKaKaoTalk, IconLine, IconProfile, IconQR } from '~/components/Icons';
@@ -64,7 +64,7 @@ const LoginMenus = [
     },
 ];
 
-function SignAndLogin() {
+function UserState() {
     const [ChangeLoginOrSign, setChangeLoginOrSign] = useState(true);
 
     const { handlePassedLogin } = useContext(AuthContext);
@@ -98,4 +98,4 @@ function SignAndLogin() {
     );
 }
 
-export default SignAndLogin;
+export default UserState;

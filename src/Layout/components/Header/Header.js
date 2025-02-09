@@ -4,7 +4,7 @@ import { faCircleQuestion, faCoins, faEarthAsia, faEllipsisVertical, faGear, faK
 import Tippy from '@tippyjs/react';
 import "tippy.js/dist/tippy.css";
 import { Link } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 import Menu from '~/components/Popper/menu';
@@ -15,7 +15,6 @@ import { IconMessage, IconSend, IconUpload } from '~/components/Icons';
 import Image from '~/components/img';
 import Search from '../Search/Search';
 import config from '~/Config';
-import { AuthContext } from '~/Context/CheckLogin';
 
 const MENU_ITEMS = [
     {
@@ -184,12 +183,7 @@ const useMenu = [
 ]
 
 const cx = classNames.bind(styles);
-function Header({ userLogin }) {
-    // handle login
-    const { handleLogin } = useContext(AuthContext);
-    // handle logout
-    const { handleLogout } = useContext(AuthContext);
-
+function Header({ userLogin, handleLogin, handleLogout }) {
 
     const [menu, setMenu] = useState(() => {
         if (userLogin) {
@@ -240,7 +234,6 @@ function Header({ userLogin }) {
                             <Tippy
                                 appendTo={document.body}
                                 hideOnClick={false}
-                                interactive
                                 content="Upload video"
                                 placement='bottom'
                             >
@@ -252,7 +245,6 @@ function Header({ userLogin }) {
                             <Tippy
                                 appendTo={document.body}
                                 hideOnClick={false}
-                                interactive
                                 content="Message"
                                 placement='bottom'
                             >
@@ -264,7 +256,6 @@ function Header({ userLogin }) {
                             <Tippy
                                 appendTo={document.body}
                                 hideOnClick={false}
-                                interactive
                                 content="Inbox"
                                 placement='bottom'
                             >

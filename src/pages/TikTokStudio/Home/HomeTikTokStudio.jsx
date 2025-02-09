@@ -83,7 +83,7 @@ const KeyFigures = () => {
                     <h2>Key figures</h2>
                     <p>Last 7 days</p>
                 </div>
-                <Button to={config.routes.analytics} iconRight={<IconBack />} text>
+                <Button to={config.routes.tiktokstudio + '/' + config.routes.analytics} iconRight={<IconBack />} text>
                     Show all
                 </Button>
             </div>
@@ -91,9 +91,9 @@ const KeyFigures = () => {
                 {dataView.map((data) => (
                     <Tippy
                         plugins={[followCursor]}
-                        followCursor='horizontal'
+                        followCursor="horizontal"
                         duration={[200, 500]}
-                        delay={[200,0]}
+                        delay={[200, 0]}
                         key={data.name}
                         appendTo={'parent'}
                         content={data.tooltipText}

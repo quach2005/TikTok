@@ -1,0 +1,112 @@
+.wrapper-footer {
+    padding: 29px 0 24px 0;
+    background: var(--black);
+    font-size: var(--font-size-small);
+    color: rgba(255, 255, 255, 0.75);
+
+    .title {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 1.6rem;
+        color: var(--white);
+    }
+    .download-on-app {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        border-bottom: 1px solid rgb(151, 151, 151);
+        padding-bottom: 48px;
+        font-family: var(--font-family-bold);
+        font-size: var(--font-size-max-large);
+        div {
+            overflow: hidden;
+            user-select: none;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: var(--border-rd);
+            width: 168px;
+            height: 48px;
+            background: url('../../../assets/images/Apple_Amazon_GGPlay.png');
+            background-size: 104%;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                transform: scale(1.01);
+            }
+        }
+        :nth-child(1),
+        :nth-child(2) {
+            background: none;
+        }
+        :nth-child(1) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            svg {
+                transform: scale(1.5);
+            }
+        }
+        .Apple {
+            background-position: -2px -55px;
+        }
+        .Amazon {
+            background-position: -2px -2px;
+        }
+        .gg-play {
+            background-position: -2px -110px;
+        }
+    }
+
+    .footer {
+        position: relative;
+        display: flex;
+        padding-top: 40px;
+        padding-left: 378px;
+        div {
+            min-width: 218px;
+            h4 {
+                color: var(--white);
+            }
+
+            ul {
+                list-style: none;
+                line-height: 30px;
+                li {
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                        text-underline-offset: 5px;
+                        text-decoration-thickness: 2px;
+                    }
+                }
+            }
+        }
+        svg {
+            position: absolute;
+            top: 43px;
+            left: 144px;
+            color: var(--white);
+        }
+    }
+
+    .language-and-copy-right {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 144px;
+        select {
+            background-color: transparent;
+            color: rgba(255, 255, 255, 0.866);
+            padding: 5px;
+            max-width: 182px;
+            min-height: 32px;
+            outline: none;
+        }
+        div {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+}

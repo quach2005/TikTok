@@ -1,5 +1,6 @@
+import { Outlet } from 'react-router-dom';
 import config from '~/Config';
-// Pages
+// Main Pages
 import Home from '~/pages/Main/Home';
 import Following from '~/pages/Main/Following';
 import Profile from '~/pages/Main/Profile';
@@ -17,43 +18,59 @@ import Inspiration from '~/pages/TikTokStudio/Inspiration';
 import SoundLib from '~/pages/TikTokStudio/SoundLib';
 import Feedback from '~/pages/TikTokStudio/Feedback/Feedback';
 import DefaultLayout from '~/Layout';
-import { Outlet } from 'react-router-dom';
+import Trending from '~/pages/TikTokStudio/Inspiration/Trending';
+import Recommended from '~/pages/TikTokStudio/Inspiration/Recommended';
+import MyInspiration from '~/pages/TikTokStudio/Inspiration/My_inspiration';
 
 const Studio = [
     {
-        element: Upload,
+        component: <Upload />,
         path: config.routes.upload
     },
     {
-        element: HomeTikTokStudio,
+        component: <HomeTikTokStudio />,
         path: config.routes.studioHome
     },
     {
-        element: Post,
+        component: <Post />,
         path: config.routes.post
     },
     {
-        element: Analytics,
+        component: <Analytics />,
         path: config.routes.analytics
     },
     {
-        element: Comment,
+        component: <Comment />,
         path: config.routes.comment
     },
     {
-        element: Inspiration,
-        path: config.routes.inspiration
+        component: <Inspiration />,
+        path: config.routes.inspiration,
+        children: [
+            {
+                component: <Trending/>,
+                path: config.routes.treding,
+            },
+            {
+                component: <Recommended />,
+                path: config.routes.recommended
+            },
+            {
+                component: <MyInspiration/>,
+                path: config.routes.my_inspiration
+            }
+        ]
     },
     {
-        element: SoundLib,
+        component: <SoundLib />,
         path: config.routes.soundLibrary
     },
     {
-        element: Outlet,
+        component: <Outlet />,
         path: config.routes.help,
         children: [
             {
-                element: Feedback,
+                component: <Feedback />,
                 path: config.routes.contactUs
             }
         ]
@@ -62,44 +79,44 @@ const Studio = [
 
 const Main = [
     {
-        element: Home,
+        component: <Home />,
         index: true,
     },
     {
-        element: Home,
+        component: <Home />,
         path: config.routes.home
     },
     {
-        element: Following,
+        component: <Following />,
         path: config.routes.following
     },
     {
-        element: Live,
+        component: <Live />,
         path: config.routes.live
     },
     {
-        element: Profile,
+        component: <Profile />,
         path: config.routes.profile
     },
     {
-        element: Search,
+        component: <Search />,
         path: config.routes.search
     }
 ]
 
 const app = [
     {
-        element: DefaultLayout,
+        component: <DefaultLayout />,
         path: '/',
         children: Main
     },
     {
-        element: LayoutTikTokStudio,
+        component: <LayoutTikTokStudio />,
         path: config.routes.tiktokstudio,
         children: Studio
     },
     {
-        element: Error,
+        component: <Error />,
         path: config.routes.error
     }
 ]

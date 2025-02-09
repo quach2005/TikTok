@@ -9,7 +9,7 @@ function SuggestedAccounts({ label, data = [], onSeeAll, onSeeLess, index, didFo
     return (
         <div className={cx('wrapper')}>
             <p className={cx('label')}>{label}</p>
-            {data.map((account, index) => {
+            {data?.map((account, index) => {
                 return <AccountItem data={account} key={index} didFollow={didFollow} />;
             })}
 

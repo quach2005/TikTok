@@ -10,12 +10,12 @@ import UseState from '~/pages/Login&Sign';
 
 const cx = classNames.bind(styles);
 function DefaultLayout() {
-    const { userLogin, passedLogin } = useContext(AuthContext);
+    const { userLogin, passedLogin, handleLogin, handleLogout } = useContext(AuthContext);
 
     return (
         <div className={cx('wrapper')}>
             <title>TikTok - Make your day</title>
-            <Header userLogin={userLogin}/>
+            <Header userLogin={userLogin} handleLogin={handleLogin} handleLogout={handleLogout} />
             <div className={cx('container')}>
                 <Sidebar userLogin={userLogin} />
                 <div className={cx('content')}>

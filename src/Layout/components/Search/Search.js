@@ -87,7 +87,7 @@ function  Search() {
                     </button>}
                     {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
     
-                    <Link to={`/search/${searchValue?searchValue:'keyword'}`} className={cx('search-btn')} onMouseDown={e => e.preventDefault()}>
+                    <Link to={`search/keyword=${searchValue.length?searchValue:"null"}`} className={cx('search-btn')} onMouseDown={e => e.preventDefault()}>
                         <IconSearch />
                     </Link>
                 </div>

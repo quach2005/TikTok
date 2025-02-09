@@ -5,6 +5,7 @@ import img_uploadVideo from '~/assets/images/uploadVideo.svg';
 import Button from '~/components/Button';
 import { IconCapCut, IconFile, IconFps, IconLight, IconVideo } from '~/components/Icons';
 import Image from '~/components/img/Image';
+import { useRef } from 'react';
 
 const video_suggestion = [
     {
@@ -31,18 +32,22 @@ const video_suggestion = [
 
 const cx = classNames.bind(style);
 function Upload() {
+    const refUpload = useRef(null);
+    const handleClickUpload = () => {
+        refUpload.current.click();
+    };
     return (
         <div className={cx('wrapper')}>
             <div className={cx('card-1')}>
-                <div className={cx('select-video-container')}>
+                <div className={cx('select-video-container')} onClick={handleClickUpload}>
                     <Image src={img_uploadVideo} alt="Upload Video" className={cx('img-upload-video')} />
                     <h3 className={cx('upload-stage-title')}>Select Video To Upload</h3>
                     <p className={cx('upload-stage-sub-title')}>Or drag and drop here</p>
-                    <Button primary className={cx('upload-stage-btn')}>
+                    <Button primary className={cx('upload-stage-btn')} onClick={handleClickUpload} >
                         Select Video
                     </Button>
                 </div>
-
+                <input type="file" ref={refUpload} style={{display:'none'}} />
                 <div className={cx('video-suggestion')}>
                     {video_suggestion.map((item, index) => (
                         <div className={cx('video-sgt-items')} key={index}>

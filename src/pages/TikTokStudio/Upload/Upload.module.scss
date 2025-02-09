@@ -1,4 +1,5 @@
 .wrapper {
+    --color-default: rgba(0, 0, 0, 0.48);
     display: flex;
     flex-flow: column;
 
@@ -38,7 +39,7 @@
             .upload-stage-sub-title {
                 font-family: var(--font-family);
                 font-size: var(--font-size-large);
-                color: rgba(0, 0, 0, 0.48);
+                color: var(--color-default);
             }
 
             .upload-stage-btn {
@@ -73,7 +74,7 @@
                     margin-top: 5px;
                     font-family: var(--font-family);
                     font-size: 13px;
-                    color: rgba(0, 0, 0, 0.48);
+                    color: var(--color-default);
                 }
             }
         }
@@ -100,7 +101,7 @@
 
         .card-2-description {
             font-size: 12px;
-            color: rgba(0, 0, 0, 0.48);
+            color: var(--color-default);
         }
 
         .card-2-btn {

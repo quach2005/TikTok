@@ -1,12 +1,12 @@
 import classNames from 'classnames/bind';
-import style from './Trending.module.scss';
+import style from './My_Inspiration.module.scss';
 const cx = classNames.bind(style);
-function Trending() {
+function MyInspiration() {
     return (
         <div className={cx('wrapper')}>
-            <div>This Is Trending Page</div>
+            <h3>My Inspiration</h3>
         </div>
     );
 }
 
-export default Trending;
+export default MyInspiration;

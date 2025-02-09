@@ -1,0 +1,39 @@
+.wrapper {
+    --color-default-inspiration: rgba(0, 0, 0, 0.48);
+    .container {
+        padding: 2.4rem;
+        .header {
+            .title {
+                font-family: var(--font-family-bold);
+            }
+            .menu {
+                position: relative;
+                margin-top: 2rem;
+                display: flex;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                .menu-item {
+                    list-style: none;
+                    a {
+                        display: block;
+                        padding: 9px 16.5px;
+                        font-size: 1.5rem;
+                        color: var(--color-default-inspiration);
+                    }
+                }
+                .active {
+                    a {
+                        color: var(--black);
+                    }
+                }
+                .underline {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    background-color: var(--black);
+                    transition: all 500ms;
+                }
+            }
+        }
+    }
+}

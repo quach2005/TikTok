@@ -17,8 +17,8 @@ function App() {
 
     const renderRoutes = (pages = []) => (
         pages.map((route, index) =>
-            <Route key={index} path={route.path} element={<route.element />} >
-                {route.index && <Route index element={<route.element />} />}
+            <Route key={index} path={route.path} element={route.component} >
+                {route.index && <Route index element={route.component} />}
                 {route.children && renderRoutes(route.children)}
             </Route>
         )

@@ -1,12 +1,12 @@
 import classNames from 'classnames/bind';
-import style from './Trending.module.scss';
+import style from './Recommended.module.scss';
 const cx = classNames.bind(style);
-function Trending() {
+function Recommended() {
     return (
         <div className={cx('wrapper')}>
-            <div>This Is Trending Page</div>
+            <h3>Recommended</h3>
         </div>
     );
 }
 
-export default Trending;
+export default Recommended;

@@ -26,7 +26,7 @@ function LibraryMusic() {
     };
 
     useEffect(() => {
-        console.warn('This API does not support music playback, we will update in the near future! Thank you');
+        console.warn('This API does not support music playback, we will update in the near future! Thank you \n');
         getPopularMusic(Page, Limit)
             .then((res) => {
                 setListMusic(res);
